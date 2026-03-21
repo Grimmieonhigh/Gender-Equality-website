@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .sitemap-wrapper {
-      overflow-x: auto;
       padding: 20px 0;
     }
 
@@ -19,7 +18,7 @@
     .sitemap-svg {
       display: block;
       width: 100%;
-      max-width: 1200px;
+      max-width: 1000px;
       height: auto;
       margin: 0 auto;
       background-color: #ffffff;
@@ -29,7 +28,7 @@
 
     .section-label {
       fill: #7a1f5c;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
       text-anchor: middle;
     }
@@ -48,6 +47,7 @@
       stroke-width: 2;
       rx: 14;
       ry: 14;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
       transition: 0.3s ease;
     }
 
@@ -106,105 +106,114 @@
     </section>
 
     <section class="sitemap-wrapper">
-      <svg class="sitemap-svg" viewBox="0 0 1200 860" role="img" aria-labelledby="sitemapTitle sitemapDesc">
+      <svg class="sitemap-svg" viewBox="0 0 1000 700" role="img" aria-labelledby="sitemapTitle sitemapDesc">
         <title id="sitemapTitle">Website sitemap</title>
         <desc id="sitemapDesc">
           A visual hierarchy showing the Splash Screen leading to the Home Page,
           and the Home Page linking to the main pages and student content pages.
         </desc>
 
-        <text x="600" y="35" class="section-label">Entry Page</text>
-        <text x="600" y="280" class="section-label">Main Pages</text>
-        <text x="600" y="610" class="section-label">Content Pages</text>
+        <text x="500" y="35" class="section-label">Entry Page</text>
+        <text x="500" y="250" class="section-label">Main Pages</text>
+        <text x="500" y="465" class="section-label">Content Pages</text>
 
-        <path class="connector" d="M600 90 L600 150"></path>
-        <path class="connector" d="M600 220 L600 280"></path>
-        <path class="connector" d="M140 315 L940 315"></path>
+        <!-- Top vertical connectors -->
+        <path class="connector" d="M500 90 L500 140"></path>
+        <path class="connector" d="M500 200 L500 255"></path>
 
-        <path class="connector" d="M600 220 L600 540"></path>
-        <path class="connector" d="M220 540 L940 540"></path>
-        <path class="connector" d="M220 540 L220 610"></path>
-        <path class="connector" d="M460 540 L460 610"></path>
-        <path class="connector" d="M700 540 L700 610"></path>
-        <path class="connector" d="M940 540 L940 610"></path>
+        <!-- Main pages connector -->
+        <path class="connector" d="M130 285 L870 285"></path>
+        <path class="connector" d="M190 285 L190 320"></path>
+        <path class="connector" d="M310 285 L310 320"></path>
+        <path class="connector" d="M430 285 L430 320"></path>
+        <path class="connector" d="M550 285 L550 320"></path>
+        <path class="connector" d="M670 285 L670 320"></path>
+        <path class="connector" d="M790 285 L790 320"></path>
 
-        <path class="connector" d="M140 315 L140 340"></path>
-        <path class="connector" d="M300 315 L300 340"></path>
-        <path class="connector" d="M460 315 L460 340"></path>
-        <path class="connector" d="M620 315 L620 340"></path>
-        <path class="connector" d="M780 315 L780 340"></path>
-        <path class="connector" d="M940 315 L940 340"></path>
+        <!-- Middle vertical connector -->
+        <path class="connector" d="M500 385 L500 470"></path>
 
+        <!-- Content pages connector -->
+        <path class="connector" d="M210 500 L790 500"></path>
+        <path class="connector" d="M210 500 L210 535"></path>
+        <path class="connector" d="M403 500 L403 535"></path>
+        <path class="connector" d="M597 500 L597 535"></path>
+        <path class="connector" d="M790 500 L790 535"></path>
+
+        <!-- Splash -->
         <a href="splash.html" class="svg-link">
           <title>Splash Screen</title>
-          <rect class="node-box" x="500" y="50" width="200" height="60"></rect>
-          <text class="node-label" x="600" y="80">Splash Screen</text>
+          <rect class="node-box" x="410" y="50" width="180" height="40"></rect>
+          <text class="node-label" x="500" y="70">Splash Screen</text>
         </a>
 
+        <!-- Home -->
         <a href="home.html" class="svg-link">
           <title>Home Page</title>
-          <rect class="node-box" x="500" y="150" width="200" height="70"></rect>
-          <text class="node-label" x="600" y="185">Home Page</text>
+          <rect class="node-box" x="410" y="140" width="180" height="60"></rect>
+          <text class="node-label" x="500" y="170">Home Page</text>
         </a>
 
+        <!-- Main Pages -->
         <a href="gallery.html" class="svg-link">
           <title>Gallery Page</title>
-          <rect class="node-box" x="60" y="340" width="160" height="65"></rect>
-          <text class="node-label" x="140" y="372">Gallery</text>
+          <rect class="node-box" x="130" y="320" width="120" height="50"></rect>
+          <text class="node-label" x="190" y="345">Gallery</text>
         </a>
 
         <a href="ais.html" class="svg-link">
           <title>Action Impact Simulator Page</title>
-          <rect class="node-box" x="220" y="340" width="160" height="65"></rect>
-          <text class="node-label" x="300" y="372">AIS</text>
+          <rect class="node-box" x="250" y="320" width="120" height="50"></rect>
+          <text class="node-label" x="310" y="345">AIS</text>
         </a>
 
         <a href="feedback.html" class="svg-link">
           <title>Feedback Page</title>
-          <rect class="node-box" x="380" y="340" width="160" height="65"></rect>
-          <text class="node-label" x="460" y="372">Feedback</text>
+          <rect class="node-box" x="370" y="320" width="120" height="50"></rect>
+          <text class="node-label" x="430" y="345">Feedback</text>
         </a>
 
         <a href="team.html" class="svg-link">
           <title>Team Page</title>
-          <rect class="node-box" x="540" y="340" width="160" height="65"></rect>
-          <text class="node-label" x="620" y="372">Team Page</text>
+          <rect class="node-box" x="490" y="320" width="120" height="50"></rect>
+          <text class="node-label" x="550" y="345">Team Page</text>
         </a>
 
         <a href="profile.html" class="svg-link">
           <title>User Profile Page</title>
-          <rect class="node-box" x="700" y="340" width="160" height="65"></rect>
-          <text class="node-label" x="780" y="372">User Profile</text>
+          <rect class="node-box" x="610" y="320" width="120" height="50"></rect>
+          <text class="node-label" x="670" y="345">User Profile</text>
         </a>
 
         <a href="sitemap.html" class="svg-link">
           <title>Sitemap Page</title>
-          <rect class="node-box current-box" x="860" y="340" width="160" height="65"></rect>
-          <text class="node-label" x="940" y="372">Sitemap</text>
+          <rect class="node-box current-box" x="730" y="320" width="120" height="50"></rect>
+          <text class="node-label" x="790" y="345">Sitemap</text>
         </a>
 
+        <!-- Content Pages -->
         <a href="content_ST1.html" class="svg-link">
           <title>Content Page Student 1</title>
-          <rect class="node-box" x="140" y="610" width="160" height="65"></rect>
-          <text class="node-label" x="220" y="642">Content ST1</text>
+          <rect class="node-box" x="150" y="535" width="120" height="50"></rect>
+          <text class="node-label" x="210" y="560">Content ST1</text>
         </a>
 
         <a href="content_ST2.html" class="svg-link">
           <title>Content Page Student 2</title>
-          <rect class="node-box" x="380" y="610" width="160" height="65"></rect>
-          <text class="node-label" x="460" y="642">Content ST2</text>
+          <rect class="node-box" x="343" y="535" width="120" height="50"></rect>
+          <text class="node-label" x="403" y="560">Content ST2</text>
         </a>
 
         <a href="content_ST3.html" class="svg-link">
           <title>Content Page Student 3</title>
-          <rect class="node-box" x="620" y="610" width="160" height="65"></rect>
-          <text class="node-label" x="700" y="642">Content ST3</text>
+          <rect class="node-box" x="537" y="535" width="120" height="50"></rect>
+          <text class="node-label" x="597" y="560">Content ST3</text>
         </a>
 
         <a href="content_ST4.html" class="svg-link">
           <title>Content Page Student 4</title>
-          <rect class="node-box" x="860" y="610" width="160" height="65"></rect>
-          <text class="node-label" x="940" y="642">Content ST4</text>
+          <rect class="node-box" x="730" y="535" width="120" height="50"></rect>
+          <text class="node-label" x="790" y="560">Content ST4</text>
         </a>
       </svg>
     </section>
