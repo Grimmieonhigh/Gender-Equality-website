@@ -103,3 +103,91 @@ img {
   max-width: 100%;
   border-radius: 6px;
 }
+
+
+/* Sitemap CSS */
+    .sitemap-wrapper {
+      overflow-x: auto;
+      padding: 20px 0;
+    }
+
+    .sitemap-intro {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .sitemap-svg {
+      display: block;
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border: 2px solid #ddd;
+      border-radius: 12px;
+    }
+
+    .section-label {
+      font-size: 18px;
+      font-weight: bold;
+      fill: #7a1f5c;
+      text-anchor: middle;
+    }
+
+    .connector {
+      stroke: #666;
+      stroke-width: 2.5;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .node rect {
+      fill: #f9e6f2;
+      stroke: #7a1f5c;
+      stroke-width: 2;
+      rx: 14;
+      ry: 14;
+      transition: fill 0.3s ease, stroke-width 0.3s ease;
+    }
+
+    .node text {
+      font-size: 15px;
+      font-weight: bold;
+      fill: #222;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      pointer-events: none;
+    }
+
+    .node:hover rect,
+    .node:focus rect,
+    .node:focus-visible rect {
+      fill: #ffd6eb;
+      stroke: #4d1038;
+      stroke-width: 3;
+    }
+
+    .current-page rect {
+      fill: #eadcff;
+      stroke: #4d1038;
+      stroke-width: 3;
+    }
+
+    .node:focus,
+    .node:focus-visible {
+      outline: none;
+    }
+
+    .page-note,
+    .legend {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+
+    .legend span {
+      display: inline-block;
+      margin: 0 12px;
+    }
+
