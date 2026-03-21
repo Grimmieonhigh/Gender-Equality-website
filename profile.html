@@ -5,6 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Profile</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .profile-box {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin-top: 20px;
+      background: #fafafa;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    progress {
+      width: 100%;
+      height: 20px;
+    }
+
+    .button-row {
+      margin-top: 15px;
+    }
+
+    .button-row button {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,7 +39,7 @@
     <nav>
       <a href="ais.html">Action Impact Simulator</a>
       <a href="gallery.html">Gallery</a>
-      <a href="profile.html">User Profile</a>
+      <a href="profile.html" class="active">User Profile</a>
       <a href="feedback.html">Feedback</a>
       <a href="team.html">Team Page</a>
       <a href="sitemap.html">Sitemap</a>
@@ -21,12 +48,193 @@
 
   <main>
     <h2>User Profile</h2>
-    <p>This page will build a user profile with JavaScript later.</p>
+    <p>Build your profile step by step to show your interests, views, and actions for gender equality.</p>
+
+    <div class="profile-box">
+      <h3>Profile Completion</h3>
+      <progress id="progressBar" value="0" max="100"></progress>
+      <p id="progressText">0% completed</p>
+    </div>
+
+    <div class="button-row">
+      <button onclick="step1()">Complete Step 1</button>
+      <button onclick="step2()">Complete Step 2</button>
+      <button onclick="step3()">Complete Step 3</button>
+      <button onclick="reviewSkipped()">Review Skipped Items</button>
+    </div>
+
+    <div class="profile-box">
+      <h3>Your Profile</h3>
+
+      <div id="step1Output" class="hidden">
+        <h4>Step 1: Basic Details</h4>
+        <p id="nameOutput"></p>
+        <p id="ageOutput"></p>
+        <p id="roleOutput"></p>
+      </div>
+
+      <div id="step2Output" class="hidden">
+        <h4>Step 2: Interests and Views</h4>
+        <p id="topicOutput"></p>
+        <p id="issueOutput"></p>
+        <p id="changeOutput"></p>
+      </div>
+
+      <div id="step3Output" class="hidden">
+        <h4>Step 3: Actions and Goals</h4>
+        <p id="actionOutput"></p>
+        <p id="goalOutput"></p>
+        <p id="campaignOutput"></p>
+      </div>
+    </div>
+
+    <div class="profile-box">
+      <h3>Skipped Items</h3>
+      <p id="skippedList">No skipped items yet.</p>
+    </div>
   </main>
 
   <footer>
     <p><a href="pageEditor_ST4.html">Page Editor</a> | <a href="validation_ST4.html">Validation</a></p>
-    <p>Student 4</p>
+    <p>Student 4 | Gender Equality Website</p>
   </footer>
+
+  <script>
+    const profile = {
+      name: "",
+      age: "",
+      role: "",
+      topic: "",
+      issue: "",
+      change: "",
+      action: "",
+      goal: "",
+      campaign: ""
+    };
+
+    let skipped = [];
+
+    function saveAnswer(key, question) {
+      const answer = prompt(question + " (Type skip to leave blank)");
+      if (answer === null || answer.trim().toLowerCase() === "skip" || answer.trim() === "") {
+        if (!skipped.includes(key)) {
+          skipped.push(key);
+        }
+        profile[key] = "";
+      } else {
+        profile[key] = answer.trim();
+        skipped = skipped.filter(item => item !== key);
+      }
+    }
+
+    function step1() {
+      saveAnswer("name", "What is your name?");
+      saveAnswer("age", "What is your age range?");
+      saveAnswer("role", "What is your role? (e.g. student, volunteer)");
+
+      document.getElementById("step1Output").classList.remove("hidden");
+      document.getElementById("nameOutput").textContent = profile.name ? "Name: " + profile.name : "";
+      document.getElementById("ageOutput").textContent = profile.age ? "Age range: " + profile.age : "";
+      document.getElementById("roleOutput").textContent = profile.role ? "Role: " + profile.role : "";
+
+      updateProgress();
+      updateSkipped();
+    }
+
+    function step2() {
+      saveAnswer("topic", "Which gender equality topic matters most to you?");
+      saveAnswer("issue", "What issue do you notice most?");
+      saveAnswer("change", "What change would you like to see?");
+
+      document.getElementById("step2Output").classList.remove("hidden");
+      document.getElementById("topicOutput").textContent = profile.topic ? "Main topic: " + profile.topic : "";
+      document.getElementById("issueOutput").textContent = profile.issue ? "Main issue: " + profile.issue : "";
+      document.getElementById("changeOutput").textContent = profile.change ? "Desired change: " + profile.change : "";
+
+      updateProgress();
+      updateSkipped();
+    }
+
+    function step3() {
+      saveAnswer("action", "What action will you take?");
+      saveAnswer("goal", "What is one personal goal?");
+      saveAnswer("campaign", "Would you join a campaign or event?");
+
+      document.getElementById("step3Output").classList.remove("hidden");
+      document.getElementById("actionOutput").textContent = profile.action ? "Action: " + profile.action : "";
+      document.getElementById("goalOutput").textContent = profile.goal ? "Goal: " + profile.goal : "";
+      document.getElementById("campaignOutput").textContent = profile.campaign ? "Campaign/Event: " + profile.campaign : "";
+
+      updateProgress();
+      updateSkipped();
+    }
+
+    function updateProgress() {
+      const totalFields = Object.keys(profile).length;
+      let completedFields = 0;
+
+      for (const key in profile) {
+        if (profile[key] !== "") {
+          completedFields++;
+        }
+      }
+
+      const percent = Math.round((completedFields / totalFields) * 100);
+      document.getElementById("progressBar").value = percent;
+      document.getElementById("progressText").textContent = percent + "% completed";
+    }
+
+    function updateSkipped() {
+      const skippedText = skipped.length > 0 ? skipped.join(", ") : "No skipped items.";
+      document.getElementById("skippedList").textContent = skippedText;
+    }
+
+    function reviewSkipped() {
+      if (skipped.length === 0) {
+        alert("There are no skipped items.");
+        return;
+      }
+
+      const itemsToReview = [...skipped];
+      for (const item of itemsToReview) {
+        if (item === "name") saveAnswer("name", "What is your name?");
+        if (item === "age") saveAnswer("age", "What is your age range?");
+        if (item === "role") saveAnswer("role", "What is your role? (e.g. student, volunteer)");
+        if (item === "topic") saveAnswer("topic", "Which gender equality topic matters most to you?");
+        if (item === "issue") saveAnswer("issue", "What issue do you notice most?");
+        if (item === "change") saveAnswer("change", "What change would you like to see?");
+        if (item === "action") saveAnswer("action", "What action will you take?");
+        if (item === "goal") saveAnswer("goal", "What is one personal goal?");
+        if (item === "campaign") saveAnswer("campaign", "Would you join a campaign or event?");
+      }
+
+      step1Refresh();
+      step2Refresh();
+      step3Refresh();
+      updateProgress();
+      updateSkipped();
+    }
+
+    function step1Refresh() {
+      document.getElementById("step1Output").classList.remove("hidden");
+      document.getElementById("nameOutput").textContent = profile.name ? "Name: " + profile.name : "";
+      document.getElementById("ageOutput").textContent = profile.age ? "Age range: " + profile.age : "";
+      document.getElementById("roleOutput").textContent = profile.role ? "Role: " + profile.role : "";
+    }
+
+    function step2Refresh() {
+      document.getElementById("step2Output").classList.remove("hidden");
+      document.getElementById("topicOutput").textContent = profile.topic ? "Main topic: " + profile.topic : "";
+      document.getElementById("issueOutput").textContent = profile.issue ? "Main issue: " + profile.issue : "";
+      document.getElementById("changeOutput").textContent = profile.change ? "Desired change: " + profile.change : "";
+    }
+
+    function step3Refresh() {
+      document.getElementById("step3Output").classList.remove("hidden");
+      document.getElementById("actionOutput").textContent = profile.action ? "Action: " + profile.action : "";
+      document.getElementById("goalOutput").textContent = profile.goal ? "Goal: " + profile.goal : "";
+      document.getElementById("campaignOutput").textContent = profile.campaign ? "Campaign/Event: " + profile.campaign : "";
+    }
+  </script>
 </body>
 </html>
