@@ -54,8 +54,8 @@ body{
 
 .navbar{
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-wrap: nowrap;
+    gap: 3px;
     justify-content: center;
 }
 
@@ -64,10 +64,10 @@ body{
     background-color: var(--secondary);
     color: var(--text-main);
     text-decoration: none;
-    padding: 10px 16px;
+    padding: 8px 12px;
     border-radius: 999px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: all 0.25s ease;
     background-color: transparent;
     border: 1px solid transparent;
