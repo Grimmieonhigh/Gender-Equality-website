@@ -1,6 +1,6 @@
 :root{
-    --primary: #BFECFF;
-    --secondary: #FFCCEA;
+    --secondary: #BFECFF;
+    --primary: #FFCCEA;
     --accent: #FFF6E3;
     --highlight: #CDC1FF;
     --background: #FFF9F5;
@@ -108,8 +108,11 @@ footer{
     background-color: var(--surface);
     border: 1px solid var(--border);
     border-radius: 14px;
-    padding: 20px;
+    padding: 40px 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+
+    max-width: 850px;
+    margin: 40px auto;
 }
 
 button {
@@ -177,6 +180,28 @@ img{
     background-size: cover;          
     background-position: center;     
     background-repeat: no-repeat;
+}
+
+.paragraph{
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    color: var(--text-main);
+}
+
+ul{
+    text-align: left;
+    font-size: 18px;
+    color: var(--text-muted);
+}
+
+.header2{
+    color: var(--secondary);
+    margin-bottom: 24px;
+    text-shadow: 0.5px 0.5px #adadad;
+    font-size: 30px;
+   
 }
 
 /* =========================================
