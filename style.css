@@ -434,9 +434,29 @@ ul{
 @media (max-width: 700px) {
   .profile-page .button-row {
     flex-direction: column;
-  }
+  }    
 
   .profile-page .button-row button {
     width: 100%;
   }
+}
+
+/* =========================================
+   STUDENT 4 NAVBAR ONLY
+   ========================================= */
+
+.profile-page .navbar a:hover,
+.sitemap-page .navbar a:hover {
+  background-color: var(--accent-brown-light);
+  border-color: var(--accent-brown);
+  color: var(--text-main);
+  transform: translateY(-1px);
+}
+
+.profile-page .navbar a.active,
+.sitemap-page .navbar a.active {
+  background-color: var(--accent-brown);
+  color: white;
+  border-color: var(--accent-brown-dark);
+  box-shadow: 0 2px 8px rgba(166, 124, 82, 0.18);
 }
