@@ -9,6 +9,10 @@
     --text-muted: #7A7A7A;
     --border: #E8DCD5;
     --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    --accent-brown: #C8A27A;
+    --accent-brown-dark: #A67C52;
+    --accent-brown-light: #E8D8C3;
+    --accent-brown-verylight: #F5EDE6;
 }
 
 body{
