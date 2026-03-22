@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
-  <meta charset="UTF-8">  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sitemap</title>
   <link rel="stylesheet" href="style.css">
 
-  
   <style>
     .sitemap-wrapper {
       padding: 20px 0;
@@ -18,60 +16,72 @@
       margin-bottom: 20px;
     }
 
+    .sitemap-intro h2 {
+      color: var(--accent-brown-dark);
+    }
+
+    .sitemap-intro p,
+    .legend,
+    .page-note {
+      color: var(--text-main);
+    }
+
     .sitemap-svg {
       display: block;
       width: 100%;
       max-width: 1000px;
       height: auto;
       margin: 0 auto;
-      background-color: #ffffff;
-      border: 2px solid #ddd;
+      background-color: var(--surface);
+      border: 2px solid var(--border);
       border-radius: 12px;
     }
 
     .section-label {
-  fill: var(--accent-brown-dark);
-  font-size: 20px;
-  font-weight: bold;
-  text-anchor: middle;
-  dominant-baseline: middle;
-}
+      fill: var(--accent-brown-dark);
+      font-size: 20px;
+      font-weight: bold;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
 
-.connector {
-  stroke: var(--border);
-  stroke-width: 2.5;
-  fill: none;
-}
+    .connector {
+      stroke: var(--border);
+      stroke-width: 2.5;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
 
-.node-box {
-  fill: var(--accent-brown-verylight);
-  stroke: var(--accent-brown);
-  stroke-width: 2;
-  rx: 14;
-  ry: 14;
-  filter: var(--shadow);
-  transition: 0.3s ease;
-}
+    .node-box {
+      fill: var(--accent-brown-verylight);
+      stroke: var(--accent-brown);
+      stroke-width: 2;
+      rx: 14;
+      ry: 14;
+      filter: var(--shadow);
+      transition: 0.3s ease;
+    }
 
-.node-label {
-  fill: var(--text-main);
-  font-size: 15px;
-  font-weight: bold;
-  text-anchor: middle;
-  dominant-baseline: middle;
-}
+    .node-label {
+      fill: var(--text-main);
+      font-size: 15px;
+      font-weight: bold;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
 
-.current-box {
-  fill: var(--accent-brown-light);
-  stroke: var(--accent-brown-dark);
-  stroke-width: 3;
-}
+    .current-box {
+      fill: var(--accent-brown-light);
+      stroke: var(--accent-brown-dark);
+      stroke-width: 3;
+    }
 
-.svg-link:hover .node-box {
-  fill: var(--accent-brown-light);
-}
+    .svg-link:hover .node-box,
+    .svg-link:focus .node-box {
+      fill: var(--accent-brown-light);
+    }
 
-  
     .legend,
     .page-note {
       text-align: center;
@@ -83,27 +93,25 @@
       display: inline-block;
       margin: 0 12px;
     }
-    
   </style>
 </head>
 
-  
 <body>
-  
-  <header>
-    <h1>Gender Equality Website</h1>
-    <nav>
-      <a href="ais.html">Action Impact Simulator</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="profile.html">User Profile</a>
-      <a href="feedback.html">Feedback</a>
-      <a href="team.html">Team Page</a>
-      <a href="sitemap.html" class="active">Sitemap</a>
-    </nav>
+  <header class="site-header">
+    <div class="header-container">
+      <h1 class="logo">Gender Equality Website</h1>
+      <nav class="navbar">
+        <a href="ais.html">Action Impact Simulator</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="profile.html">User Profile</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="team.html">Team Page</a>
+        <a href="sitemap.html" class="active">Sitemap</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    
     <section class="sitemap-intro">
       <h2>Sitemap</h2>
       <p>This visual sitemap shows the structure of our website and links to each page.</p>
@@ -111,20 +119,20 @@
 
     <section class="sitemap-wrapper">
       <svg class="sitemap-svg" viewBox="0 0 1000 700" role="img" aria-labelledby="sitemapTitle sitemapDesc">
-        
+        <title id="sitemapTitle">Website sitemap</title>
         <desc id="sitemapDesc">
           A visual hierarchy showing the Splash Screen leading to the Home Page,
           and the Home Page linking to the main pages and student content pages.
         </desc>
 
         <text x="500" y="35" class="section-label">Entry Page</text>
-        <text x="500" y="215" class="section-label">Main Pages</text>
+        <text x="500" y="210" class="section-label">Main Pages</text>
         <text x="500" y="440" class="section-label">Content Pages</text>
 
         <!-- Top connectors -->
         <path class="connector" d="M500 90 L500 140"></path>
-        <path class="connector" d="M500 200 L500 205"></path>
-        <path class="connector" d="M500 245 L500 285"></path>
+        <path class="connector" d="M500 200 L500 195"></path>
+        <path class="connector" d="M500 225 L500 285"></path>
 
         <!-- Main pages horizontal connector -->
         <path class="connector" d="M155 285 L855 285"></path>
