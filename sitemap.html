@@ -30,52 +30,46 @@
     }
 
     .section-label {
-  fill: #7a1f5c;
+  fill: var(--secondary);
   font-size: 20px;
   font-weight: bold;
   text-anchor: middle;
   dominant-baseline: middle;
 }
 
-    .connector {
-      stroke: #666;
-      stroke-width: 2.5;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
+.connector {
+  stroke: var(--border);
+  stroke-width: 2.5;
+  fill: none;
+}
 
-    .node-box {
-      fill: #f9e6f2;
-      stroke: #7a1f5c;
-      stroke-width: 2;
-      rx: 14;
-      ry: 14;
-      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
-      transition: 0.3s ease;
-    }
+.node-box {
+  fill: var(--accent);
+  stroke: var(--secondary);
+  stroke-width: 2;
+  rx: 14;
+  ry: 14;
+  filter: var(--shadow);
+  transition: 0.3s ease;
+}
 
-    .node-label {
-      fill: #222;
-      font-size: 15px;
-      font-weight: bold;
-      text-anchor: middle;
-      dominant-baseline: middle;
-      pointer-events: none;
-    }
+.node-label {
+  fill: var(--text-main);
+  font-size: 15px;
+  font-weight: bold;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
 
-    .current-box {
-      fill: #eadcff;
-      stroke: #4d1038;
-      stroke-width: 3;
-    }
+.current-box {
+  fill: var(--highlight);
+  stroke: var(--secondary);
+  stroke-width: 3;
+}
 
-    .svg-link:hover .node-box,
-    .svg-link:focus .node-box {
-      fill: #ffd6eb;
-      stroke: #4d1038;
-      stroke-width: 3;
-    }
+.svg-link:hover .node-box {
+  fill: var(--primary);
+}
 
     .legend,
     .page-note {
