@@ -16,6 +16,8 @@
     .profile-card {
   background: var(--surface);
   border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
   box-shadow: var(--shadow);
 }
 
@@ -40,14 +42,19 @@
     }
 
     .button-row button {
-  background: linear-gradient(135deg, var(--secondary), var(--highlight));
-  color: var(--text-main);
+  background: linear-gradient(135deg, var(--accent-brown), var(--accent-brown-dark));
+  color: white;
   border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-weight: bold;
+  cursor: pointer;
   box-shadow: var(--shadow);
+  transition: 0.2s ease;
 }
 
-    .button-row button:hover {
-  background: linear-gradient(135deg, var(--highlight), var(--secondary));
+.button-row button:hover {
+  background: linear-gradient(135deg, var(--accent-brown-dark), var(--accent-brown));
 }
 
     .step-status {
@@ -79,9 +86,9 @@
     }
 
     progress {
-  accent-color: var(--secondary);
+  accent-color: var(--accent-brown);
 }
-
+    
     .progress-info {
       display: flex;
       justify-content: space-between;
@@ -90,18 +97,23 @@
       margin-top: 12px;
       font-size: 0.95rem;
     }
-
+    
     .tag {
-  background: var(--primary);
-  color: var(--text-main);
-  border: 1px solid var(--border);
+  background: var(--accent-brown-light);
+  color: #4A3A33;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-weight: bold;
 }
 
 
     .summary-box {
-  background: var(--accent);
-  border-left: 6px solid var(--secondary);
+  background: var(--accent-brown-verylight);
+  border-left: 6px solid var(--accent-brown);
+  padding: 18px;
+  border-radius: 10px;
 }
+
 
     .summary-box p {
       margin: 8px 0;
@@ -113,14 +125,9 @@
     }
 
     .step-badge {
-      display: inline-block;
-      background: #7a1f5c;
-      color: white;
-      font-size: 0.85rem;
-      padding: 4px 10px;
-      border-radius: 20px;
-      margin-bottom: 10px;
-    }
+  background: var(--accent-brown);
+  color: white;
+}
 
     .highlight-text {
       color: #7a1f5c;
