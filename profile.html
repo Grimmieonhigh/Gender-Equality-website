@@ -278,7 +278,7 @@
 
     const fieldLabels = {
       name: "Name",
-      age: "Age Range",
+      age: "Age",
       role: "Role",
       topic: "Main Topic",
       issue: "Main Issue",
@@ -352,7 +352,7 @@
     function renderStep1() {
       document.getElementById("step1Output").classList.remove("hidden");
       document.getElementById("nameOutput").textContent = profile.name ? "Name: " + profile.name : "";
-      document.getElementById("ageOutput").textContent = profile.age ? "Age range: " + profile.age : "";
+      document.getElementById("ageOutput").textContent = profile.age ? "Age: " + profile.age : "";
       document.getElementById("roleOutput").textContent = profile.role ? "Role: " + profile.role : "";
     }
 
@@ -437,7 +437,7 @@
 
       itemsToReview.forEach(item => {
         if (item === "name") askQuestion("name", "What is your name?");
-        if (item === "age") askQuestion("age", "What is your age range?");
+        if (item === "age") askQuestion("age", "What is your age?");
         if (item === "role") askQuestion("role", "What is your role? (for example: student, volunteer, organiser)");
         if (item === "topic") askQuestion("topic", "Which gender equality topic matters most to you?");
         if (item === "issue") askQuestion("issue", "What issue do you notice most in society, work, or education?");
