@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Profile</title>
   <link rel="stylesheet" href="style.css">
-  
+
   <style>
     .profile-container {
       display: grid;
@@ -14,24 +13,25 @@
     }
 
     .profile-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 22px;
-  box-shadow: var(--shadow);
-}
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
 
     .profile-card h3 {
       margin-top: 0;
-      color: #7a1f5c;
+      color: var(--accent-brown-dark);
     }
 
     .intro-text {
       font-size: 1.05rem;
-      background: #f9eef5;
-      border-left: 5px solid #7a1f5c;
+      background: var(--accent-brown-verylight);
+      border-left: 5px solid var(--accent-brown);
       padding: 14px;
       border-radius: 8px;
+      color: var(--text-main);
     }
 
     .button-row {
@@ -42,26 +42,28 @@
     }
 
     .button-row button {
-  background: linear-gradient(135deg, var(--accent-brown), var(--accent-brown-dark));
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 12px 18px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-  transition: 0.2s ease;
-}
+      margin: 0;
+      padding: 12px 18px;
+      font-weight: bold;
+      border-radius: 10px;
+      border: none;
+      background: linear-gradient(135deg, var(--accent-brown), var(--accent-brown-dark));
+      color: white;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: 0.2s ease;
+    }
 
-.button-row button:hover {
-  background: linear-gradient(135deg, var(--accent-brown-dark), var(--accent-brown));
-}
+    .button-row button:hover {
+      background: linear-gradient(135deg, var(--accent-brown-dark), var(--accent-brown));
+      transform: translateY(-1px);
+    }
 
     .step-status {
       font-weight: bold;
       margin-top: 15px;
-      color: #7a1f5c;
-      background: #f8edf4;
+      color: var(--accent-brown-dark);
+      background: var(--accent-brown-verylight);
       padding: 10px 12px;
       border-radius: 8px;
     }
@@ -73,22 +75,25 @@
     .profile-section {
       margin-top: 18px;
       padding-top: 12px;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid var(--border);
     }
 
     .profile-section h4 {
       margin-bottom: 10px;
-      color: #7a1f5c;
+      color: var(--accent-brown-dark);
     }
 
     .profile-section p {
       margin: 8px 0;
+      color: var(--text-main);
     }
 
     progress {
-  accent-color: var(--accent-brown);
-}
-    
+      width: 100%;
+      height: 24px;
+      accent-color: var(--accent-brown);
+    }
+
     .progress-info {
       display: flex;
       justify-content: space-between;
@@ -96,24 +101,29 @@
       gap: 10px;
       margin-top: 12px;
       font-size: 0.95rem;
+      color: var(--text-main);
     }
-    
-    .tag {
-  background: var(--accent-brown-light);
-  color: #4A3A33;
-  border-radius: 20px;
-  padding: 6px 12px;
-  font-weight: bold;
-}
 
+    .tag {
+      display: inline-block;
+      background: var(--accent-brown-light);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin: 6px 6px 0 0;
+      font-size: 0.9rem;
+      font-weight: bold;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
 
     .summary-box {
-  background: var(--accent-brown-verylight);
-  border-left: 6px solid var(--accent-brown);
-  padding: 18px;
-  border-radius: 10px;
-}
-
+      background: var(--accent-brown-verylight);
+      border-left: 6px solid var(--accent-brown);
+      padding: 18px;
+      border-radius: 10px;
+      color: var(--text-main);
+    }
 
     .summary-box p {
       margin: 8px 0;
@@ -121,17 +131,26 @@
 
     .small-note {
       font-size: 0.95rem;
-      color: #555;
+      color: var(--text-muted);
     }
 
     .step-badge {
-  background: var(--accent-brown);
-  color: white;
-}
+      display: inline-block;
+      background: var(--accent-brown);
+      color: white;
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
 
     .highlight-text {
-      color: #7a1f5c;
+      color: var(--accent-brown-dark);
       font-weight: bold;
+    }
+
+    main h2 {
+      color: var(--accent-brown-dark);
     }
 
     @media (max-width: 700px) {
@@ -145,17 +164,20 @@
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Gender Equality Website</h1>
-    <nav>
-      <a href="ais.html">Action Impact Simulator</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="profile.html" class="active">User Profile</a>
-      <a href="feedback.html">Feedback</a>
-      <a href="team.html">Team Page</a>
-      <a href="sitemap.html">Sitemap</a>
-    </nav>
+  <header class="site-header">
+    <div class="header-container">
+      <h1 class="logo">Gender Equality Website</h1>
+      <nav class="navbar">
+        <a href="ais.html">Action Impact Simulator</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="profile.html" class="active">User Profile</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="team.html">Team Page</a>
+        <a href="sitemap.html">Sitemap</a>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -229,7 +251,9 @@
         <p class="small-note">
           These are questions you skipped. Use the review button to come back and answer them later.
         </p>
-        <div id="skippedTags"></div>
+        <div id="skippedTags">
+          <p>No skipped items yet.</p>
+        </div>
       </section>
     </div>
   </main>
