@@ -3,12 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Splash Screen</title>
+  <title>Welcome</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Splash screen layout */
+    .splash-container {
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .splash-title {
+      font-size: 2.8rem;
+      color: var(--text-main);
+    }
+
+    .splash-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 500px;
+    }
+
+    .enter-btn {
+      padding: 14px 24px;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      background-color: var(--primary);
+      color: var(--text-main);
+      transition: 0.3s ease;
+    }
+
+    .enter-btn:hover {
+      background-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* Optional fade-in animation */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
-  
+
 <body>
-   <header class="site-header">
+
+  <!-- HEADER (your exact one) -->
+  <header class="site-header">
     <div class="header-container">
       <div class="brand">
         <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
@@ -16,18 +70,33 @@
       </div>
       <nav class="navbar">
         <a href="home.html">Home</a>
-        <a href="splash.html">Splash</a>
+        <a href="splash.html" class="active">Splash</a>
         <a href="ais.html">Action Impact Simulator</a>
         <a href="gallery.html">Gallery</a>
         <a href="profile.html">User Profile</a>
         <a href="feedback.html">Feedback</a>
         <a href="team.html">Team Page</a>
-        <a href="sitemap.html" class="active">Sitemap</a>
+        <a href="sitemap.html">Sitemap</a>
       </nav>
     </div>
-   </header>
-  <p>Welcome to our website.</p>
-  <p>Loading home page...</p>
-  <p><a href="home.html">Skip Intro</a></p>
+  </header>
+
+  <!-- SPLASH CONTENT -->
+  <main class="splash-container fade-in">
+    <h2 class="splash-title">✨ Welcome to Our Gender Equality Website</h2>
+
+    <p class="splash-subtitle">
+      Explore ideas, learn about real issues, and discover how you can make a difference in creating a more equal world.
+    </p>
+
+    <button class="enter-btn" onclick="enterSite()">Enter Website</button>
+  </main>
+
+  <script>
+    function enterSite() {
+      window.location.href = "home.html";
+    }
+  </script>
+
 </body>
 </html>
