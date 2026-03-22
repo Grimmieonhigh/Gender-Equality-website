@@ -179,6 +179,59 @@ img{
     background-repeat: no-repeat;
 }
 
+
+/*USER PROFILE CSS*/
+
+.profile-page h2 {
+  color: var(--accent-brown-dark);
+}
+
+.profile-page .intro-text {
+  background: var(--accent-brown-verylight);
+  border-left: 5px solid var(--accent-brown);
+  color: var(--text-main);
+}
+
+.profile-page .profile-card h3 {
+  color: var(--accent-brown-dark);
+}
+
+.profile-page .button-row button {
+  background: linear-gradient(135deg, var(--accent-brown), var(--accent-brown-dark));
+  color: white;
+}
+
+.profile-page .button-row button:hover {
+  background: linear-gradient(135deg, var(--accent-brown-dark), var(--accent-brown));
+}
+
+.profile-page .step-status {
+  color: var(--accent-brown-dark);
+  background: var(--accent-brown-verylight);
+}
+
+.profile-page .summary-box {
+  background: var(--accent-brown-verylight);
+  border-left: 6px solid var(--accent-brown);
+}
+
+.profile-page .step-badge {
+  background: var(--accent-brown);
+  color: white;
+}
+
+.profile-page .tag {
+  background: var(--accent-brown-light);
+  color: var(--text-main);
+}
+
+.profile-page progress {
+  accent-color: var(--accent-brown);
+}
+
+.profile-page .highlight-text {
+  color: var(--accent-brown-dark);
+}
 .women-text{
     max-width: 600px; 
     color: var(--text-main);
