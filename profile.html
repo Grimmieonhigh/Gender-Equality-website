@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Profile</title>
   <link rel="stylesheet" href="style.css">
+  
   <style>
     .profile-container {
       display: grid;
@@ -12,12 +14,10 @@
     }
 
     .profile-card {
-      background: linear-gradient(180deg, #fffafc 0%, #ffffff 100%);
-      border: 1px solid #e7d7e2;
-      border-radius: 14px;
-      padding: 22px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    }
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
 
     .profile-card h3 {
       margin-top: 0;
@@ -40,23 +40,15 @@
     }
 
     .button-row button {
-      margin: 0;
-      padding: 12px 18px;
-      font-weight: bold;
-      border-radius: 10px;
-      border: none;
-      background: linear-gradient(135deg, #7a1f5c, #a43d7a);
-      color: white;
-      cursor: pointer;
-      box-shadow: 0 3px 8px rgba(122, 31, 92, 0.2);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    }
+  background: linear-gradient(135deg, var(--secondary), var(--highlight));
+  color: var(--text-main);
+  border: none;
+  box-shadow: var(--shadow);
+}
 
     .button-row button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(122, 31, 92, 0.28);
-      background: linear-gradient(135deg, #5e1545, #8e2d67);
-    }
+  background: linear-gradient(135deg, var(--highlight), var(--secondary));
+}
 
     .step-status {
       font-weight: bold;
@@ -87,10 +79,8 @@
     }
 
     progress {
-      width: 100%;
-      height: 24px;
-      accent-color: #7a1f5c;
-    }
+  accent-color: var(--secondary);
+}
 
     .progress-info {
       display: flex;
@@ -102,24 +92,16 @@
     }
 
     .tag {
-      display: inline-block;
-      background: linear-gradient(135deg, #f3d9e9, #ffe6f3);
-      color: #5e1545;
-      padding: 6px 12px;
-      border-radius: 20px;
-      margin: 6px 6px 0 0;
-      font-size: 0.9rem;
-      font-weight: bold;
-      border: 1px solid #e0bcd3;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-    }
+  background: var(--primary);
+  color: var(--text-main);
+  border: 1px solid var(--border);
+}
+
 
     .summary-box {
-      background: linear-gradient(135deg, #f9f1f6 0%, #ffffff 100%);
-      border-left: 6px solid #7a1f5c;
-      padding: 18px;
-      border-radius: 10px;
-    }
+  background: var(--accent);
+  border-left: 6px solid var(--secondary);
+}
 
     .summary-box p {
       margin: 8px 0;
