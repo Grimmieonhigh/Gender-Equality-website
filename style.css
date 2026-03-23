@@ -204,22 +204,18 @@ ul{
    
 }
 
-/* =========================================
-   STUDENT 4 CUSTOM STYLES (SITEMAP + PROFILE)
-   Scoped so it does NOT affect other pages
-   ========================================= */
+/* STUDENT 4 CUSTOM STYLES (SITEMAP + PROFILE)
+   Scoped so it does NOT affect other pages */
 
 
-/* ---------- SHARED PAGE TITLES ---------- */
+/* SHARED PAGE TITLES */
 .sitemap-page h2,
 .profile-page h2 {
   color: var(--accent-brown-dark);
 }
 
 
-/* =========================================
-   SITEMAP PAGE STYLES
-   ========================================= */
+/* SITEMAP PAGE STYLES */
 
 .sitemap-page .sitemap-wrapper {
   padding: 20px 0;
@@ -235,6 +231,8 @@ ul{
   border: 2px solid var(--border);
   border-radius: 12px;
   display: block;
+  width:80%;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -304,9 +302,7 @@ ul{
 }
 
 
-/* =========================================
-   USER PROFILE PAGE STYLES
-   ========================================= */
+/* USER PROFILE PAGE STYLES */
 
 .profile-page .profile-container {
   display: grid;
