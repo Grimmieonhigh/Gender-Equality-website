@@ -5,6 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .gallery{
+        width: min(1110px, 100%);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .tile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .content {
+        position: absolute;
+        inset: auto 0 0 0;
+        padding: 24px;
+        z-index: 2;
+        transform: translateY(10px);
+        transition: transform 0.45s ease;
+    }
+
+    .tag {
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        background: rgba(255,255,255,0.16);
+        backdrop-filter: blur(8px);
+    }
+    
+  </style>
 </head>
 <body>
 
@@ -75,13 +111,37 @@
     </section>
 
     <section>
-        <h3>Explore Gallery Pages</h3>
-        <ul>
-            <li><a href="content_ST1.html">Content Page (Student 1)</a></li>
-            <li><a href="content_ST2.html">Content Page (Student 2)</a></li>
-            <li><a href="content_ST3.html">Content Page (Student 3)</a></li>
-            <li><a href="content_ST4.html">Content Page (Student 4)</a></li>
-        </ul>
+        <h2>Explore Gallery pages</h2>
+    </section>
+
+    <section class="gallery">
+        <a class="tile" href="content_ST1.html">
+            <img src="https://www.unicef.org/sites/default/files/styles/hero_extended/public/UN0284179.jpg.webp?itok=D511vpeg" alt="Education Access for Girls Worldwide">
+            <div class="content">
+                <span class="tag">Student 1</span>
+                <h2>Education Access for Girls Worldwide</h2>
+            </div>
+        </a>
+        <a class="tile" href="content_ST2.html">
+            <img src="https://knowledge.wharton.upenn.edu/wp-content/uploads/2025/07/7.2.25-tiantian-yang-gender-asymmetry-job-search-women-in-STEM-GettyImages-1366602068.jpg" alt="Women in STEM">
+            <div class="content">
+                <span class="tag">Student 2</span>
+                <h2>Women in STEM</h2>
+            </div>
+        </a>
+        <a class="tile" href="content_ST3.html">
+            <img src="https://images.squarespace-cdn.com/content/v1/5c77083ab10f25ced2b5c538/1595434602879-ATPL8P0H6UZJG4M2CUWF/vogue.jpg" alt="Representation of Women in Media">
+            <div class="content">
+                <span class="tag">Student 3</span>
+                <h2>Representation of Women in Media</h2>
+            </div>
+        </a>
+        <a class="tile" href="content_ST4.html">
+            <img src="https://hbr.org/resources/images/article_assets/2019/01/Jan19_23_111035746-2.jpg" alt="Gender Pay Gap in the UK">
+            <div class="content">
+                <span class="tag">Student 4</span>
+                <h2>Gender Pay Gap in the UK</h2>
+            </div>
     </section>
 </main>
 
