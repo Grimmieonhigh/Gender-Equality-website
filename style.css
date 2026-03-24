@@ -204,6 +204,32 @@ ul{
    
 }
 
+.tile{
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  min-height: 280px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: inherit;
+  transform: translateY(0) scale(1);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(159, 160, 165, 0.82), rgba(59, 60, 61, 0.08));
+  z-index: 1;
+}
+
+.tile:hover,
+.tile:focus-visible {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.36);
+}
+
 /* STUDENT 4 CUSTOM STYLES (SITEMAP + PROFILE)
    Scoped so it does NOT affect other pages */
 
