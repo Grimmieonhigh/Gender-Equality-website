@@ -3,30 +3,734 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feedback</title>
+  <title>Sitemap</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <h1>Gender Equality Website</h1>
-    <nav>
-      <a href="ais.html">Action Impact Simulator</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="profile.html">User Profile</a>
-      <a href="feedback.html">Feedback</a>
-      <a href="team.html">Team Page</a>
-      <a href="sitemap.html">Sitemap</a>
-    </nav>
+
+<body class="sitemap-page">
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand">
+        <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
+        <h1 class="logo">Gender Equality Website</h1>
+      </div>
+      <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="splash.html">Splash</a>
+        <a href="ais.html">Action Impact Simulator</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="profile.html">User Profile</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="team.html">Team Page</a>
+        <a href="sitemap.html" class="active">Sitemap</a>
+      </nav>
+    </div>
   </header>
 
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+        font-family: "Times New Roman", Times, serif;
+    
+      background: #f9fcff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #cfe8ff, #ffd6e8, #d8f3dc);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid #b8d8f8;
+    }
+
+    header h1 {
+      color: #355070;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #4a4a4a;
+    }
+
+    nav {
+      background-color: #ffffff;
+      border-bottom: 2px solid #e0ecf7;
+      padding: 12px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #355070;
+      padding: 10px 16px;
+      border-radius: 20px;
+      background: #eef7ff;
+      transition: 0.3s ease;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background: #ffd6e8;
+      color: #2f3e46;
+    }
+
+    nav a.active {
+      background: #d8f3dc;
+      color: #1b4332;
+      border: 2px solid #95d5b2;
+    }
+
+    main {
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto;
+    }
+
+    section {
+      background: #ffffff;
+      margin-bottom: 28px;
+      padding: 24px;
+      border-radius: 18px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      color: #355070;
+      margin-bottom: 14px;
+    }
+
+    .intro-text {
+      margin-bottom: 18px;
+    }
+
+    .filter-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .filter-bar label {
+      font-weight: bold;
+      color: #355070;
+    }
+
+    .filter-bar select {
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #bcd4e6;
+      background: #f4fbff;
+    }
+
+    .scroll-container {
+      max-height: 430px;
+      overflow-y: auto;
+      padding-right: 8px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .programme-card {
+      background: linear-gradient(180deg, #eef7ff, #fff0f6);
+      border: 2px solid #d8f3dc;
+      border-radius: 16px;
+      padding: 18px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .programme-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .programme-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .programme-card h3 {
+      color: #355070;
+      margin-bottom: 10px;
+    }
+
+    .programme-card p {
+      margin-bottom: 14px;
+    }
+
+    .programme-card a {
+      display: inline-block;
+      text-decoration: none;
+      background: #bde0fe;
+      color: #1d3557;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .programme-card a:hover {
+      background: #ffc8dd;
+      transform: scale(1.05);
+    }
+
+    .rating-summary {
+      background: linear-gradient(90deg, #d8f3dc, #eef7ff);
+      padding: 18px;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      border: 2px solid #cfe8ff;
+    }
+
+    .rating-summary h3 {
+      color: #1b4332;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+    }
+
+    .review-card {
+      background: #fffafc;
+      border: 2px solid #ffd6e8;
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .review-card h4 {
+      color: #355070;
+      margin-bottom: 10px;
+    }
+
+    .review-card p {
+      margin-bottom: 10px;
+    }
+
+    .review-meta {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    .review-rating {
+      font-weight: bold;
+      color: #2d6a4f;
+    }
+
+    .review-card a {
+      color: #355070;
+      font-weight: bold;
+    }
+
+    form {
+      margin-top: 12px;
+    }
+
+    fieldset {
+      border: 2px solid #cfe8ff;
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 18px;
+      background: #fcfeff;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #355070;
+      padding: 0 8px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #355070;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #bcd4e6;
+      border-radius: 10px;
+      font-size: 1rem;
+      background: #f9fdff;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .error {
+      color: #c1121f;
+      font-size: 0.9rem;
+      margin-top: 5px;
+    }
+
+    .success-message {
+      margin-top: 16px;
+      padding: 14px;
+      border-radius: 12px;
+      background: #d8f3dc;
+      color: #1b4332;
+      font-weight: bold;
+      display: none;
+    }
+
+    .char-counter {
+      margin-top: 6px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    button,
+    input[type="submit"],
+    input[type="reset"] {
+      border: none;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    input[type="submit"] {
+      background: #bde0fe;
+      color: #1d3557;
+    }
+
+    input[type="submit"]:hover {
+      background: #a2d2ff;
+      transform: scale(1.03);
+    }
+
+    input[type="reset"] {
+      background: #ffd6e8;
+      color: #6d214f;
+    }
+
+    input[type="reset"]:hover {
+      background: #ffb3c6;
+      transform: scale(1.03);
+    }
+
+    .invalid {
+      border: 2px solid #c1121f;
+      background: #fff5f5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eef7ff;
+      border-top: 2px solid #d8f3dc;
+      color: #355070;
+    }
+
+    footer a {
+      color: #355070;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        width: 95%;
+      }
+    }
+    
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Gender Equality Opportunities</h1>
+    <p>Explore programmes, student initiatives, and ways to support SDG 5: Gender Equality</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="content_ST3.html">Gender Equality</a></li>
+      <li><a href="feedback.html" class="active">Feedback & Directory</a></li>
+      <li><a href="team.html">Team</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <h2>Feedback Page</h2>
-    <p>This page will contain the programme directory and feedback form later.</p>
+
+    <section>
+      <h2>Discover Gender Equality Programmes</h2>
+      <p class="intro-text">
+        Gender equality means creating fair opportunities, equal rights, and safe spaces for everyone.
+        Below are some student-friendly programmes and initiatives that encourage leadership, education,
+        advocacy, and inclusion.
+      </p>
+
+      <div class="filter-bar">
+        <label for="sort-options">Sort programmes:</label>
+        <select id="sort-options" name="sort-options">
+          <option>Most popular</option>
+          <option>Nearest</option>
+          <option>Student-friendly</option>
+          <option>Recently added</option>
+        </select>
+      </div>
+
+      <div class="scroll-container">
+        <div class="card-grid">
+          <article class="programme-card">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Students working together on a leadership programme">
+            <h3>Women in Leadership Workshop</h3>
+            <p>
+              A student-focused workshop helping young women build confidence, leadership skills, and public speaking ability.
+            </p>
+            <a href="#">Learn More</a>
+          </article>
+
+          <article class="programme-card">
+            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80" alt="Group discussion about equality and inclusion">
+            <h3>Equality Discussion Circles</h3>
+            <p>
+              Join open conversations about inclusion, respect, equal opportunities, and how students can challenge gender bias.
+            </p>
+            <a href="#">Join</a>
+          </article>
+
+          <article class="programme-card">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80" alt="Mentoring session between students and professionals">
+            <h3>Mentoring for Girls in STEM</h3>
+            <p>
+              Connect with mentors in science, technology, engineering, and maths to encourage girls to pursue future careers.
+            </p>
+            <a href="#">Get Involved</a>
+          </article>
+
+          <article class="programme-card">
+            <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=800&q=80" alt="Campaign materials promoting equal rights">
+            <h3>Campus Awareness Campaign</h3>
+            <p>
+              Support awareness events and campaigns that promote equal rights, respectful behaviour, and safe learning spaces.
+            </p>
+            <a href="#">Support</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <h2>Ratings and Reviews</h2>
+
+      <div class="rating-summary">
+        <h3>8.9/10 Excellent</h3>
+        <p>Based on 124 student reviews. Students highlighted supportive communities, useful workshops, and inclusive spaces.</p>
+      </div>
+
+      <div class="review-grid">
+        <article class="review-card">
+          <h4>Helpful and Inspiring</h4>
+          <p>
+            The leadership workshop helped me become more confident when speaking in class and applying for opportunities.
+            <a href="#">See more</a>
+          </p>
+          <p class="review-meta">Reviewed by Aisha Khan | 12 March 2026</p>
+          <p class="review-rating">Rating: 9/10</p>
+        </article>
+
+        <article class="review-card">
+          <h4>Great for Students</h4>
+          <p>
+            The discussion circles were welcoming and made it easy to learn more about equality in a respectful way.
+            <a href="#">See more</a>
+          </p>
+          <p class="review-meta">Reviewed by Priya Patel | 9 March 2026</p>
+          <p class="review-rating">Rating: 8/10</p>
+        </article>
+
+        <article class="review-card">
+          <h4>Very Encouraging Experience</h4>
+          <p>
+            The STEM mentoring programme was motivating and gave practical advice about future careers and challenges.
+            <a href="#">See more</a>
+          </p>
+          <p class="review-meta">Reviewed by Emily Brown | 4 March 2026</p>
+          <p class="review-rating">Rating: 10/10</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Send Us Your Feedback</h2>
+      <p class="intro-text">
+        Share your thoughts on these programmes and help improve student engagement with gender equality initiatives.
+      </p>
+
+      <form id="feedbackForm" novalidate>
+        <fieldset>
+          <legend>Personal Details</legend>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" required>
+              <div class="error" id="nameError"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+              <div class="error" id="emailError"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Telephone Number</label>
+              <input type="tel" id="phone" name="phone" required>
+              <div class="error" id="phoneError"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="dateVisit">Preferred Date</label>
+              <input type="date" id="dateVisit" name="dateVisit" required>
+              <div class="error" id="dateError"></div>
+            </div>
+          </div>
+
+        <div class="form-group">
+             <label for="address">Address</label>
+             <textarea id="address" name="address" required placeholder="Enter your address"></textarea>
+             <div class="error" id="addressError"></div>
+          </div> 
+
+          <div class="form-group">
+            <label for="dateTimeVisit">Event Date and Time</label>
+            <input type="datetime-local" id="dateTimeVisit" name="dateTimeVisit" required>
+            <div class="error" id="dateTimeError"></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Feedback Details</legend>
+
+          <div class="form-group">
+            <label for="programmeType">Choose a programme type</label>
+            <select id="programmeType" name="programmeType" required>
+              <option value="">-- Select an option --</option>
+              <option value="leadership">Leadership Workshop</option>
+              <option value="discussion">Discussion Circle</option>
+              <option value="mentoring">STEM Mentoring</option>
+              <option value="campaign">Awareness Campaign</option>
+            </select>
+            <div class="error" id="programmeError"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="interestList">Areas of interest</label>
+            <input list="interestOptions" id="interestList" name="interestList" placeholder="Type or choose an area">
+            <datalist id="interestOptions">
+              <option value="Leadership">
+              <option value="Inclusion">
+              <option value="STEM">
+              <option value="Advocacy">
+              <option value="Equal Opportunities">
+            </datalist>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Comment / Message</label>
+            <textarea id="message" name="message" maxlength="250" required placeholder="Write your feedback here..."></textarea>
+            <div class="char-counter" id="charCounter">250 characters remaining</div>
+            <div class="error" id="messageError"></div>
+          </div>
+        </fieldset>
+
+        <div class="button-row">
+          <input type="submit" value="Submit Feedback">
+          <input type="reset" value="Reset Form">
+        </div>
+
+        <div class="success-message" id="successMessage">
+          Thank you for your feedback! Your response has been successfully recorded.
+        </div>
+      </form>
+    </section>
+
   </main>
 
-  <footer>
-    <p><a href="pageEditor_ST3.html">Page Editor</a> | <a href="validation_ST3.html">Validation</a></p>
-    <p>Student 3</p>
-  </footer>
+<footer>
+  <p>Page Editor: Joyana Jude Varadaraj | Student ID: W2134634</p>
+  <p>
+    <a href="https://validator.w3.org/">HTML Validation</a> |
+    <a href="https://jigsaw.w3.org/css-validator/">CSS Validation</a> |
+    <a href="pageEditor_ST3.html">Page Editor</a> |
+    <a href="validation_ST3.html">Validation Page</a>
+  </p>
+</footer>
+
+  <script>
+    const form = document.getElementById("feedbackForm");
+    const message = document.getElementById("message");
+    const charCounter = document.getElementById("charCounter");
+    const successMessage = document.getElementById("successMessage");
+
+    const fullName = document.getElementById("fullName");
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+    const dateVisit = document.getElementById("dateVisit");
+    const dateTimeVisit = document.getElementById("dateTimeVisit");
+    const address = document.getElementById("address");
+    const addressError = document.getElementById("addressError");
+    const programmeType = document.getElementById("programmeType");
+
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const phoneError = document.getElementById("phoneError");
+    const dateError = document.getElementById("dateError");
+    const dateTimeError = document.getElementById("dateTimeError");
+    const programmeError = document.getElementById("programmeError");
+    const messageError = document.getElementById("messageError");
+
+    message.addEventListener("input", function () {
+      const remaining = 250 - message.value.length;
+      charCounter.textContent = remaining + " characters remaining";
+    });
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      let isValid = true;
+
+      clearErrors();
+
+      if (fullName.value.trim() === "") {
+        nameError.textContent = "Please enter your full name.";
+        fullName.classList.add("invalid");
+        isValid = false;
+      }
+
+      if (email.value.trim() === "") {
+        emailError.textContent = "Please enter your email address.";
+        email.classList.add("invalid");
+        isValid = false;
+      } else if (!email.value.includes("@") || !email.value.includes(".")) {
+        emailError.textContent = "Please enter a valid email address.";
+        email.classList.add("invalid");
+        isValid = false;
+      }
+
+      if (phone.value.trim() === "") {
+        phoneError.textContent = "Please enter your telephone number.";
+        phone.classList.add("invalid");
+        isValid = false;
+      }
+
+      if (dateVisit.value === "") {
+        dateError.textContent = "Please choose a date.";
+        dateVisit.classList.add("invalid");
+        isValid = false;
+      }
+
+      if (address.value.trim() === "") {
+        addressError.textContent = "Please enter your address.";
+        address.classList.add("invalid");
+        isValid = false;
+      }
+
+      if (dateTimeVisit.value === "") {
+        dateTimeError.textContent = "Please choose a date and time.";
+        dateTimeVisit.classList.add("invalid");
+        isValid = false;
+      }
+
+      if (programmeType.value === "") {
+        programmeError.textContent = "Please select a programme type.";
+        programmeType.classList.add("invalid");
+        isValid = false;
+      }
+
+      if (message.value.trim() === "") {
+        messageError.textContent = "Please enter your feedback message.";
+        message.classList.add("invalid");
+        isValid = false;
+      }
+
+      if (isValid) {
+        successMessage.style.display = "block";
+        form.reset();
+        charCounter.textContent = "250 characters remaining";
+      } else {
+        successMessage.style.display = "none";
+      }
+    });
+
+    function clearErrors() {
+      nameError.textContent = "";
+      emailError.textContent = "";
+      phoneError.textContent = "";
+      dateError.textContent = "";
+      addressError.textContent = "";
+      dateTimeError.textContent = "";
+      programmeError.textContent = "";
+      messageError.textContent = "";
+
+      fullName.classList.remove("invalid");
+      email.classList.remove("invalid");
+      phone.classList.remove("invalid");
+      dateVisit.classList.remove("invalid");
+      address.classList.remove("invalid");
+      dateTimeVisit.classList.remove("invalid");
+      programmeType.classList.remove("invalid");
+      message.classList.remove("invalid");
+    }
+  </script>
+
 </body>
 </html>
