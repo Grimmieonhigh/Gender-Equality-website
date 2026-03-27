@@ -245,7 +245,7 @@ ul{
     text-align: center;
     line-height: 90vh;
 }
-.splash.display-none{
+.splash.none{
     position: fixed;
     opacity: 0;
     top:0;
