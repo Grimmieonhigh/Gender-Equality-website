@@ -104,10 +104,12 @@ footer{
     border-top: 2px solid var(--border);
     display: flex;
     gap: 50px;
+    align-items: flex-start;
 }
 .footer-column {
   display: flex;
-  flex-direction: column;   
+  flex-direction: column;
+  min-width:120px;
 }
 
 .footer-column a {
@@ -126,6 +128,7 @@ footer{
     flex-direction: column;
     align-items: center;
     gap: 12px;
+    flex: 0 0 auto;
 }
 
 .card{
