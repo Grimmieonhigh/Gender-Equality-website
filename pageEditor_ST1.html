@@ -5,11 +5,186 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Editor Student 1</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root{
+      --accent-pink: #fde4f2;
+      --title1: #d85673;
+      --title2: #f191c8;
+      --title3: #f26b8a;
+      --goto: #f79ac0;
+      --white: #fff;
+    }
+    .section1{
+      background-color: var(--accent-pink);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 40px 50px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      
+      max-width: 850px;
+      margin: 40px auto;
+    }
+
+    .section2{
+      background-color: var(--title3);
+      border: 1px solid var(--border);
+      color: var(--white);
+      text-align: center;
+      border-radius: 14px;
+      padding: 40px 50px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+
+      max-width: 850px;
+      margin: 40px auto;
+    }
+
+    .title1{
+      color: var(--title1);
+      text-align: center;
+    }
+    .section-nav{
+      text-align:center;
+      margin: 20px 0;
+    }
+    .section-nav a{
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 5px;
+      background-color: var(--title2);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    .section-nav a:hover{
+      background-color: var(--title1);
+    }
+  </style>
 </head>
+
+<header class="site-header">
+    <div class="header-container">
+        <div class="brand">
+            <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
+            <h1 class="logo">Gender Equality Website</h1>
+        </div>
+        <nav class="navbar">
+            <a href="home.html" class="active">Home</a>
+            <a href="ais.html">Action Impact Simulator</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="profile.html">User Profile</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="team.html">Team Page</a>
+            <a href="sitemap.html">Sitemap</a>
+        </nav>
+    </div>
+</header>
+
 <body>
-  <main>
-    <h1>Page Editor - Student 1</h1>
-    <p>This page will explain Student 1's contribution later.</p>
+  <main class="card">
+
+    <nav class="section-nav" aria-label="Section Navigation">
+      <a href="#Template">Shared Template & Navigation</a>
+      <a href="#Home">Home page</a>
+      <a href="#Gallery">Gallery</a>
+      <a href="#Content">Content</a>
+      <a href="#Accessibility">Accessibility Considerations</a>
+      <a href="#Compliance">Compliance with JANET Regulations</a>
+    </nav>
+
+    <section class="section2">
+      <h1>Ayesha - Editor's Page</h1>
+    </section>
+    <section class="section1" id="Template">
+      <h2 class="title1">Shared Template & Navigation</h2>
+      <p class="paragraph">
+        I have created a basic shared template with a colour scheme, a content area that links to everyones content, editor and 
+        validation, a global CSS. i have discussed with the team about the colour palette and we have chosen pastel. In the global 
+        CSS i have done a basic template so everyone else can input their own CSS changes that they desire (such as header1 or 
+        paragraph instead of h2 or p) and added effects to the buttons such as back to top page and the naviagtion page. I have
+        also discussed what parts of the code that should not be changed.<br><br>
+        I have made sure that the HTML is easy to understand such as body, main, header, head, footer, back to top. For the CSS techniques,
+        i used card to center and create a section so the team is able to seperate into different parts on their pages. i have used :root
+        so that the colour scheme is easy to access and implement. For paragraph i have used bigger text and letter-spacing so it is easier to read.
+        These choices were used so there is better usability and structure so everyone is able to use the templates.<br><br>
+        Challenges i have faced was the navigation page. i decided to put the naviagtion on the side and the logo and title on the left.
+        When i have added more links to the navigation, the links go underneath the logo. It took me a while to figure out that i needed
+        to make the texts much more smaller so it can fit. I have learnt that i have to be careful with the CSS styling because a simple
+        line of code can change how the page is formatted. 
+      </p>
+    </section>
+
+    <section class="section1" id="Home">
+      <h2 class="title1">Home page</h2>
+      <p class="paragraph">
+        For the home page, I have planned for it to be visually pleasing. I decided to added a banner at the start to 
+        introduce what the website is about. I found this particularly hard to implement since the text would not appear on the image
+        or either sepearte itself from the image instead of overlaying or the image would not fit onto the page. to fix this, I changed 
+        the padding for the image to fit correctly and restrict the text widths so it is on the left side of the page. I put the image
+        as a background in women-text.<br><br>
+        After doing this, I described what the website is about, 3 actions individuals can take and 3 outcomes if these actions are widely
+        adopted. I used it in the card so the text is centered and readable. For the CSS on the header, I added a shadow behind the text so 
+        it is  more visible.<br><br>
+        For the gallery, I wanted to add a glassy effect. I found this a bit difficult due to the colours not blending in correctly. Another
+        problem i have came across was the formatting, the tag for student one and header of the gallery would be out of place and the 
+        gallery would not be centered correctly. To fix this, i had to make sure the padding, fomt-size, letter-spacing are so that the text elements 
+        aligned properly and looked balanced. i used grid and centering to make sure the gallery stayed positioned in the middle of the page.<br><br>
+        <a href="home.html">Go to Home</a>
+      </p>
+    </section>
+
+    <section class="section1" id="Gallery">
+      <h2 class="title1">Gallery</h2>
+      <p class="paragraph">
+
+      </p>
+    </section>
+
+    <section class="section1" id="Content">
+      <h2 class="title1">Content</h2>
+      <p class="paragraph">
+
+      </p>
+    </section>
+
+    <section class="section1" id="Accessibility">
+      <h2 class="title1">Accessibility Considerations</h2>
+      <p class="paragraph">
+
+      </p>
+    </section>
+
+    <section class="section1" id="Compliance">
+      <h2 class="title1">Compliance</h2>
+      <p class="paragraph">
+
+      </p>
+    </section>
+    
   </main>
+
+  <footer>
+    <div class="brand2">
+      <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
+      <h1 class="logo">Gender Equality Website</h1>
+      <p class="tagline">Promoting fairness, equality, and opportunity for all</p>
+    </div>
+    <div class="footer-column">
+      <p>Page Editor</p>
+      <a href="pageEditor_ST1.html">Student 1</a>
+      <a href="pageEditor_ST2.html">Student 2</a>
+      <a href="pageEditor_ST3.html">Student 3</a>
+      <a href="pageEditor_ST4.html">Student 4</a>
+    </div>
+
+    <div class="footer-column">
+      <p>Validation</p>
+      <a href="validation_ST1.html">Student 1</a>
+      <a href="validation_ST2.html">Student 2</a>
+      <a href="validation_ST3.html">Student 3</a>
+      <a href="validation_ST4.html">Student 4</a>
+    </div>
+  </footer>
 </body>
 </html>
