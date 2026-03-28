@@ -5,6 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery</title>
   <link rel="stylesheet" href="style.css">
+    
+  <style>
+     .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            padding: 30px;
+        }
+
+
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .gallery-item p {
+            padding: 15px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: var(--white);
+            padding: 25px;
+            max-width: 600px;
+            width: 90%;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .modal-content img {
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .close-btn {
+            float: right;
+            cursor: pointer;
+            font-size: 22px;
+            color: #888;
+            transition: 0.3s;
+        }
+
+        .close-btn:hover {
+            color: #000;
+        }
+    </style>
+  
 </head>
 <body>
   <header class="site-header">
@@ -26,13 +99,124 @@
   </header>
 
   <main>
-    <h2>Gallery Page</h2>
-    <p>This page will show gallery images and interactivity later.</p>
+    <h1>Gender Equality Gallery</h1>
+    <div class="gallery-container">
+
+        <div class="gallery-item" onclick="openModal(0)">
+            <img src="https://www.tmi.org/Images/cultivating-women-leadership.jpg" alt="Women in leadership">
+            <p>Women in Leadership</p>
+        </div>
+
+        <div class="gallery-item" onclick="openModal(1)">
+            <img src="https://heysara.sg/wordpress/wp-content/uploads/2022/03/Starting-An-Education-Center-in-Singapore.jpg" alt="Equal education">
+            <p>Equal Education</p>
+        </div>
+
+        <div class="gallery-item" onclick="openModal(2)">
+            <img src="https://www.skineasi.com/cdn/shop/articles/shutterstock_2312871189.jpg?v=1709622329" alt="Workplace equality">
+            <p>Workplace Equality</p>
+        </div>
+
+        <div class="gallery-item" onclick="openModal(3)">
+            <img src="https://thebettercambodia.com/wp-content/uploads/2022/11/391753.png" alt="End gender violence">
+            <p>End Gender Violence</p>
+        </div>
+
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content" id="modalContent">
+
+            <span class="close-btn" onclick="closeModal()">✖</span>
+
+            <img id="modalImg" src="" alt="" style="width:100%">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDesc"></p>
+
+        
+            <div class="controls">
+                <button onclick="changeColor()">Change Colour</button>
+                <button onclick="changeFont()">Change Font</button>
+            </div>
+
+        </div>
+    </div>
+
+    
   </main>
 
   <footer>
-    <p><a href="pageEditor_ST1.html">Page Editor</a> | <a href="validation_ST1.html">Validation</a></p>
-    <p>Student 1</p>
+    <div class="brand2">
+      <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
+      <h1 class="logo">Gender Equality Website</h1>
+      <p class="tagline">Promoting fairness, equality, and opportunity for all</p>
+    </div>
+    <div class="footer-column">
+      <p>Page Editor</p>
+      <a href="pageEditor_ST1.html">Student 1</a>
+      <a href="pageEditor_ST2.html">Student 2</a>
+      <a href="pageEditor_ST3.html">Student 3</a>
+      <a href="pageEditor_ST4.html">Student 4</a>
+    </div>
+
+    <div class="footer-column">
+      <p>Validation</p>
+      <a href="validation_ST1.html">Student 1</a>
+      <a href="validation_ST2.html">Student 2</a>
+      <a href="validation_ST3.html">Student 3</a>
+      <a href="validation_ST4.html">Student 4</a>
+    </div>
   </footer>
+  <script>
+    const galleryData = [
+        {
+            title: "Women in Leadership",
+            desc: "Promoting women in leadership positions helps reduce inequality and creates diverse decision-making environments.",
+            img: "https://www.tmi.org/Images/cultivating-women-leadership.jpg"
+        },
+        {
+            title: "Equal Education",
+            desc: "Education access for all genders is key to achieving equality and empowering future generations.",
+            img: "https://heysara.sg/wordpress/wp-content/uploads/2022/03/Starting-An-Education-Center-in-Singapore.jpg"
+        },
+        {
+            title: "Workplace Equality",
+            desc: "Fair wages and equal opportunities in the workplace ensure justice and economic balance.",
+            img: "https://www.skineasi.com/cdn/shop/articles/shutterstock_2312871189.jpg"
+        },
+        {
+            title: "End Gender Violence",
+            desc: "Raising awareness and taking action can help eliminate violence and discrimination worldwide.",
+            img: "https://thebettercambodia.com/wp-content/uploads/2022/11/391753.png"
+        }
+    ];
+
+    // Open modal
+    function openModal(index) {
+        document.getElementById("modal").style.display = "flex";
+
+        document.getElementById("modalImg").src = galleryData[index].img;
+        document.getElementById("modalTitle").innerText = galleryData[index].title;
+        document.getElementById("modalDesc").innerText = galleryData[index].desc;
+    }
+
+    // Close modal
+    function closeModal() {
+        document.getElementById("modal").style.display = "none";
+    }
+
+    // Change colour
+    function changeColor() {
+        const modal = document.getElementById("modalContent");
+        modal.style.backgroundColor = modal.style.backgroundColor === "lightpink" ? "white" : "lightpink";
+    }
+
+    // Change font
+    function changeFont() {
+        const modal = document.getElementById("modalContent");
+        modal.style.fontFamily = modal.style.fontFamily === "cursive" ? "Arial" : "cursive";
+    }
+
+  </script>
 </body>
 </html>
