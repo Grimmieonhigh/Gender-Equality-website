@@ -2,11 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=home.html">
+
+  <!-- Redirect after 4 seconds -->
+  <meta http-equiv="refresh" content="4; url=home.html">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting</title>
+  <title>Splash Screen</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <p>Redirecting to <a href="home.html">home page</a>...</p>
+
+<div class="splash">
+  <h1>Welcome to our Gender Equality Website!</h1>
+
+  <p>Our mission is to explore ideas, learn about real issues, and discover how you can make a difference in creating a more equal world.</p>
+
+  <p>Group Members: Student 1, Student 2, Student 3 and Student 4</p>
+
+  <p id="countdown">Entering site in 4...</p>
+
+  <button onclick="skip()">Skip Intro</button>
+
+  <div class="loader"></div>
+</div>
+
+<script src="app.js"></script>
+
 </body>
 </html>
