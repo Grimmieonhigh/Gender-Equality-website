@@ -291,9 +291,11 @@ ul{
     
     background:
         linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url("images/women-together.jpg") no-repeat center center;
+        url("images/women-together.jpg") no-repeat center;
+
+    background-size: cover;
     
-    color: black;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
