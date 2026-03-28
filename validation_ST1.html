@@ -5,11 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Validation Student 1</title>
   <link rel="stylesheet" href="style.css">
+
+   <style>
+    :root{
+      --accent-pink: #fde4f2;
+      --title1: #d85673;
+      --title2: #f191c8;
+      --title3: #f26b8a;
+      --goto: #f79ac0;
+      --white: #fff;
+    }
+    .section1{
+      background-color: var(--accent-pink);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 40px 50px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      
+      max-width: 850px;
+      margin: 40px auto;
+    }
+
+    .section2{
+      background-color: var(--title3);
+      border: 1px solid var(--border);
+      color: var(--white);
+      text-align: center;
+      border-radius: 14px;
+      padding: 40px 50px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+
+      max-width: 850px;
+      margin: 40px auto;
+    }
+
+    .title1{
+      color: var(--title1);
+      text-align: center;
+    }
+  </style>
 </head>
-<body>
-  <main>
-    <h1>Validation - Student 1</h1>
-    <p>This page will contain validation evidence later.</p>
+
+<header class="site-header">
+    <div class="header-container">
+        <div class="brand">
+            <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
+            <h1 class="logo">Gender Equality Website</h1>
+        </div>
+        <nav class="navbar">
+            <a href="home.html" class="active">Home</a>
+            <a href="ais.html">Action Impact Simulator</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="profile.html">User Profile</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="team.html">Team Page</a>
+            <a href="sitemap.html">Sitemap</a>
+        </nav>
+    </div>
+</header>
+
+<body id="top">
+  <main class="card">
+    <section class="section2">
+      <h1>Ayesha - Validator Page</h1>
+    </section>
+    <section class="section1" id="val-home">
+      <h2 class="title1">Home Page</h2>
+      <img src="images\Screenshot 2026-03-28 201702.png" alt="home page">
+      <p class="paragraph">
+        Note: i had an error for leaving a p end tag without a p opening. It was an extra tag i did not need. 
+      </p>
+    </section>
+    <section class="section1" id="val-gallery">
+      <h2 class="title1">Gallery</h2>
+      <img src="images\Screenshot 2026-03-28 204651.png" alt="gallery page">
+      <p class="paragraph">
+        Note: i got a error for skipping one heading. 
+      </p>
+    </section>
+    <section class="section1" id="val-content">
+      <h2 class="title1">Content</h2>
+      <img src="images\Screenshot 2026-03-28 205724.png" alt="content page">
+    </section>
+    <section class="section1">
+      <h2 class="title1">Reflection</h2>
+      <p class="paragraph">
+        I got few errors on the page indicating i missed a tag or skipped headers. By fixing this, i removed the extra tags
+        and changed h3 to h2. I got an warining on empty headers and to fix it, i just wrote in the headers. For the validation proceess
+        i learnt that there are certain rules in HTML that should be followed to avoid errors. 
+      </p>
+    </section>
   </main>
+  <footer>
+    <div class="brand2">
+      <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
+      <h1 class="logo">Gender Equality Website</h1>
+      <p class="tagline">Promoting fairness, equality, and opportunity for all</p>
+    </div>
+    <div class="footer-column">
+      <p>Page Editor</p>
+      <a href="pageEditor_ST1.html">Student 1</a>
+      <a href="pageEditor_ST2.html">Student 2</a>
+      <a href="pageEditor_ST3.html">Student 3</a>
+      <a href="pageEditor_ST4.html">Student 4</a>
+    </div>
+
+    <div class="footer-column">
+      <p>Validation</p>
+      <a href="validation_ST1.html">Student 1</a>
+      <a href="validation_ST2.html">Student 2</a>
+      <a href="validation_ST3.html">Student 3</a>
+      <a href="validation_ST4.html">Student 4</a>
+    </div>
+  </footer>
+  <a class="back-to-top" href="#top">Back to top</a>
 </body>
 </html>
