@@ -191,7 +191,7 @@
         }
     ];
 
-    // Open modal
+    
     function openModal(index) {
         document.getElementById("modal").style.display = "flex";
 
@@ -200,18 +200,18 @@
         document.getElementById("modalDesc").innerText = galleryData[index].desc;
     }
 
-    // Close modal
+    
     function closeModal() {
         document.getElementById("modal").style.display = "none";
     }
 
-    // Change colour
+    
     function changeColor() {
         const modal = document.getElementById("modalContent");
         modal.style.backgroundColor = modal.style.backgroundColor === "lightpink" ? "white" : "lightpink";
     }
 
-    // Change font
+    
     function changeFont() {
         const modal = document.getElementById("modalContent");
         modal.style.fontFamily = modal.style.fontFamily === "cursive" ? "Arial" : "cursive";
