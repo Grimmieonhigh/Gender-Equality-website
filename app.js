@@ -2,6 +2,7 @@
 
 let time = 4;
 let countdown = document.getElementById("countdown");
+let splash = document.querySelector(".splash");
 
 let timer = setInterval(() => {
     time--;
@@ -9,9 +10,13 @@ let timer = setInterval(() => {
 
     if (time === 0) {
         clearInterval(timer);
+
+        // start fade out
+        splash.classList.add("fade-out");
+
+        // wait for fade to finish, then redirect
+        setTimeout(() => {
+            window.location.href = "home.html";
+        }, 1000); // matches CSS transition time
     }
 }, 1000);
-
-function skip() {
-    window.location.href = "home.html";
-}
