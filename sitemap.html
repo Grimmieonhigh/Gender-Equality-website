@@ -5,6 +5,20 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Sitemap</title>
       <link rel="stylesheet" href="style.css">
+      
+      <style>
+         .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+            white-space: nowrap;
+         }
+      </style>
    </head>
    
    <body class="sitemap-page">
@@ -31,8 +45,9 @@
             <p>This visual sitemap shows the structure of our website and links to each page.</p>
          </section>
          
-         <section class="sitemap-wrapper">
-            <h2 class="visually-hidden">Sitemap Structure</h2>
+         
+         <section class="sitemap-wrapper" aria-labelledby="sitemap-heading">
+            <h2 id="sitemap-heading" class="visually-hidden">Sitemap Structure</h2>
             <svg class="sitemap-svg" viewBox="0 0 1000 700" role="img" aria-labelledby="sitemapTitle sitemapDesc">
                <title id="sitemapTitle">Website sitemap</title>
                <desc id="sitemapDesc"> A visual hierarchy showing the Splash Screen leading to the Home Page and the Home Page linking to the main pages and student content pages. </desc>
