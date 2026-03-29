@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sitemap</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Local CSS fix (since i can't edit main CSS) -->
+  <style>
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+      white-space: nowrap;
+    }
+  </style>
 </head>
 
 <body class="sitemap-page">
@@ -14,7 +29,9 @@
         <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
         <h1 class="logo">Gender Equality Website</h1>
       </div>
+
       <nav class="navbar">
+        <a href="splash.html">Splash</a>
         <a href="home.html">Home</a>
         <a href="ais.html">Action Impact Simulator</a>
         <a href="gallery.html">Gallery</a>
@@ -31,13 +48,15 @@
       <h2>Sitemap</h2>
       <p>This visual sitemap shows the structure of our website and links to each page.</p>
     </section>
-    
+
     <section class="sitemap-wrapper">
       <h2 class="visually-hidden">Sitemap Structure</h2>
+
       <svg class="sitemap-svg" viewBox="0 0 1000 700" role="img" aria-labelledby="sitemapTitle sitemapDesc">
         <title id="sitemapTitle">Website sitemap</title>
-        <desc id="sitemapDesc"> A visual hierarchy showing the Splash Screen leading to the Home Page and the Home Page linking to the main pages and student content pages.
-    </desc>
+        <desc id="sitemapDesc">
+          A visual hierarchy showing the Splash Screen leading to the Home Page and the Home Page linking to the main pages and student content pages.
+        </desc>
 
         <text x="500" y="35" class="section-label">Entry Page</text>
         <text x="500" y="240" class="section-label">Main Pages</text>
@@ -51,7 +70,7 @@
         <!-- Main pages horizontal connector -->
         <path class="connector" d="M155 285 L855 285"></path>
 
-        <!-- Main page drops in exact navigation order -->
+        <!-- Main page drops -->
         <path class="connector" d="M155 285 L155 320"></path>
         <path class="connector" d="M295 285 L295 320"></path>
         <path class="connector" d="M435 285 L435 320"></path>
@@ -63,15 +82,15 @@
         <path class="connector" d="M500 370 L500 420"></path>
         <path class="connector" d="M500 460 L500 500"></path>
 
-        <!-- Content pages horizontal connector -->
+        <!-- Content pages -->
         <path class="connector" d="M210 500 L790 500"></path>
         <path class="connector" d="M210 500 L210 535"></path>
         <path class="connector" d="M403 500 L403 535"></path>
         <path class="connector" d="M597 500 L597 535"></path>
         <path class="connector" d="M790 500 L790 535"></path>
 
-        <!-- Entry pages -->
-        <a href="index.html" class="svg-link">
+        <!-- Entry -->
+        <a href="splash.html" class="svg-link">
           <title>Splash Screen</title>
           <rect class="node-box" x="410" y="50" width="180" height="40"></rect>
           <text class="node-label" x="500" y="70">Splash Screen</text>
@@ -83,82 +102,83 @@
           <text class="node-label" x="500" y="170">Home Page</text>
         </a>
 
-        <!-- Main pages in exact same order as top navigation -->
+        <!-- Main pages -->
         <a href="ais.html" class="svg-link">
-          <title>Action Impact Simulator Page</title>
+          <title>AIS</title>
           <rect class="node-box" x="90" y="320" width="130" height="50"></rect>
           <text class="node-label" x="155" y="345">AIS</text>
         </a>
 
         <a href="gallery.html" class="svg-link">
-          <title>Gallery Page</title>
+          <title>Gallery</title>
           <rect class="node-box" x="230" y="320" width="130" height="50"></rect>
           <text class="node-label" x="295" y="345">Gallery</text>
         </a>
 
         <a href="profile.html" class="svg-link">
-          <title>User Profile Page</title>
+          <title>User Profile</title>
           <rect class="node-box" x="370" y="320" width="130" height="50"></rect>
-          <text class="node-label" x="435" y="345">User Profile</text>
+          <text class="node-label" x="435" y="345">Profile</text>
         </a>
 
         <a href="feedback.html" class="svg-link">
-          <title>Feedback Page</title>
+          <title>Feedback</title>
           <rect class="node-box" x="510" y="320" width="130" height="50"></rect>
           <text class="node-label" x="575" y="345">Feedback</text>
         </a>
 
         <a href="team.html" class="svg-link">
-          <title>Team Page</title>
+          <title>Team</title>
           <rect class="node-box" x="650" y="320" width="130" height="50"></rect>
-          <text class="node-label" x="715" y="345">Team Page</text>
+          <text class="node-label" x="715" y="345">Team</text>
         </a>
 
         <a href="sitemap.html" class="svg-link">
-          <title>Sitemap Page</title>
+          <title>Sitemap</title>
           <rect class="node-box current-box" x="790" y="320" width="130" height="50"></rect>
           <text class="node-label" x="855" y="345">Sitemap</text>
         </a>
 
-        <!-- Content pages -->
+        <!-- Content -->
         <a href="content_ST1.html" class="svg-link">
-          <title>Content Page Student 1</title>
+          <title>Content ST1</title>
           <rect class="node-box" x="150" y="535" width="120" height="50"></rect>
-          <text class="node-label" x="210" y="560">Content ST1</text>
+          <text class="node-label" x="210" y="560">ST1</text>
         </a>
 
         <a href="content_ST2.html" class="svg-link">
-          <title>Content Page Student 2</title>
+          <title>Content ST2</title>
           <rect class="node-box" x="343" y="535" width="120" height="50"></rect>
-          <text class="node-label" x="403" y="560">Content ST2</text>
+          <text class="node-label" x="403" y="560">ST2</text>
         </a>
 
         <a href="content_ST3.html" class="svg-link">
-          <title>Content Page Student 3</title>
+          <title>Content ST3</title>
           <rect class="node-box" x="537" y="535" width="120" height="50"></rect>
-          <text class="node-label" x="597" y="560">Content ST3</text>
+          <text class="node-label" x="597" y="560">ST3</text>
         </a>
 
         <a href="content_ST4.html" class="svg-link">
-          <title>Content Page Student 4</title>
+          <title>Content ST4</title>
           <rect class="node-box" x="730" y="535" width="120" height="50"></rect>
-          <text class="node-label" x="790" y="560">Content ST4</text>
+          <text class="node-label" x="790" y="560">ST4</text>
         </a>
+
       </svg>
     </section>
 
     <p class="legend">
       <span><strong>Rounded boxes</strong> = pages</span>
-      <span><strong>Lines</strong> = website structure</span>
-      <span><strong>Highlighted box</strong> = current page</span>
+      <span><strong>Lines</strong> = structure</span>
+      <span><strong>Highlighted</strong> = current page</span>
     </p>
 
     <p class="page-note">
-      Use Tab to move through the sitemap links and press Enter to open a page.
+      Use Tab to navigate and Enter to open pages.
     </p>
   </main>
 
-  <footer>
+    <footer>
     <div class="brand2">
       <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
       <h1 class="logo">Gender Equality Website</h1>
@@ -180,6 +200,6 @@
       <a href="validation_ST4.html">Shaniqua</a>
     </div>
   </footer>
-  
+
 </body>
 </html>
