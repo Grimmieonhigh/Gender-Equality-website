@@ -1,12 +1,21 @@
 <!DOCTYPE html> 
 <html lang="en">
    <head>
+      <!-- Sets the character encoding so text displays correctly -->
       <meta charset="UTF-8">
+
+      <!-- Makes the page responsive on different screen sizes -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- Title shown in the browser tab -->
       <title>Sitemap</title>
+
+      <!-- Links to the shared website stylesheet -->
       <link rel="stylesheet" href="style.css">
       
+      <!-- Local CSS used only on this page -->
       <style>
+         /* Hides content visually while keeping it accessible to screen readers */
          .visually-hidden {
             position: absolute;
             width: 1px;
@@ -21,14 +30,22 @@
       </style>
    </head>
    
+   <!-- Applies Student 4 sitemap-specific styling -->
    <body class="sitemap-page">
+
+      <!-- Header section containing the logo and main navigation -->
       <header class="site-header">
          <div class="header-container">
+
+            <!-- Brand area with logo and website title -->
             <div class="brand">
                <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img"> 
                <h1 class="logo">Gender Equality Website</h1>
             </div>
-            <nav class="navbar"> <a href="home.html">Home</a>
+
+            <!-- Main navigation links -->
+            <nav class="navbar">
+               <a href="home.html">Home</a>
                <a href="ais.html">Action Impact Simulator</a> 
                <a href="gallery.html">Gallery</a> 
                <a href="profile.html">User Profile</a> 
@@ -39,31 +56,42 @@
          </div>
       </header>
       
+      <!-- Main content area -->
       <main>
+
+         <!-- Introductory text explaining the purpose of the page -->
          <section class="sitemap-intro">
             <h2>Sitemap</h2>
             <p>This visual sitemap shows the structure of our website and links to each page.</p>
          </section>
          
-         
+         <!-- Sitemap wrapper section with accessible hidden heading -->
          <section class="sitemap-wrapper" aria-labelledby="sitemap-heading">
             <h2 id="sitemap-heading" class="visually-hidden">Sitemap Structure</h2>
+
+            <!-- SVG diagram used to create the visual sitemap -->
             <svg class="sitemap-svg" viewBox="0 0 1000 700" role="img" aria-labelledby="sitemapTitle sitemapDesc">
+
+               <!-- Accessible title and description for screen readers -->
                <title id="sitemapTitle">Website sitemap</title>
-               <desc id="sitemapDesc"> A visual hierarchy showing the Splash Screen leading to the Home Page and the Home Page linking to the main pages and student content pages. </desc>
+               <desc id="sitemapDesc">
+                  A visual hierarchy showing the Splash Screen leading to the Home Page and the Home Page linking to the main pages and student content pages.
+               </desc>
+
+               <!-- Section labels -->
                <text x="500" y="35" class="section-label">Entry Page</text>
                <text x="500" y="240" class="section-label">Main Pages</text>
                <text x="500" y="440" class="section-label">Content Pages</text>
                
-               <!-- Top connectors --> 
+               <!-- Connector lines between top entry pages -->
                <path class="connector" d="M500 90 L500 140"></path>
                <path class="connector" d="M500 200 L500 220"></path>
                <path class="connector" d="M500 260 L500 285"></path>
                
-               <!-- Main pages horizontal connector --> 
+               <!-- Horizontal connector line for main pages -->
                <path class="connector" d="M155 285 L855 285"></path>
                
-               <!-- Main page drops in exact navigation order --> 
+               <!-- Vertical connector lines from main page bar down to each main page -->
                <path class="connector" d="M155 285 L155 320"></path>
                <path class="connector" d="M295 285 L295 320"></path>
                <path class="connector" d="M435 285 L435 320"></path>
@@ -71,30 +99,31 @@
                <path class="connector" d="M715 285 L715 320"></path>
                <path class="connector" d="M855 285 L855 320"></path>
                
-               <!-- Middle connectors --> 
+               <!-- Connector lines between main pages and content pages -->
                <path class="connector" d="M500 370 L500 420"></path>
                <path class="connector" d="M500 460 L500 500"></path>
                
-               <!-- Content pages horizontal connector --> 
+               <!-- Horizontal connector line for content pages -->
                <path class="connector" d="M210 500 L790 500"></path>
                <path class="connector" d="M210 500 L210 535"></path>
                <path class="connector" d="M403 500 L403 535"></path>
                <path class="connector" d="M597 500 L597 535"></path>
                <path class="connector" d="M790 500 L790 535"></path>
                
-               <!-- Entry pages --> 
+               <!-- Entry pages -->
                <a href="index.html" class="svg-link">
                   <title>Splash Screen</title>
                   <rect class="node-box" x="410" y="50" width="180" height="40"></rect>
                   <text class="node-label" x="500" y="70">Splash Screen</text>
                </a>
+
                <a href="home.html" class="svg-link">
                   <title>Home Page</title>
                   <rect class="node-box" x="410" y="140" width="180" height="60"></rect>
                   <text class="node-label" x="500" y="170">Home Page</text>
                </a>
                
-               <!-- Main pages in exact same order as top navigation --> 
+               <!-- Main pages -->
                <a href="ais.html" class="svg-link">
                   <title>Action Impact Simulator Page</title>
                   <rect class="node-box" x="90" y="320" width="130" height="50"></rect>
@@ -131,7 +160,7 @@
                   <text class="node-label" x="855" y="345">Sitemap</text>
                </a>
                
-               <!-- Content pages --> 
+               <!-- Content pages for each student -->
                <a href="content_ST1.html" class="svg-link">
                   <title>Content Page Student 1</title>
                   <rect class="node-box" x="150" y="535" width="120" height="50"></rect>
@@ -157,23 +186,44 @@
                </a>
             </svg>
          </section>
-         <p class="legend"> <span><strong>Rounded boxes</strong> = pages</span> <span><strong>Lines</strong> = website structure</span> <span><strong>Highlighted box</strong> = current page</span> </p>
-         <p class="page-note"> Use Tab to move through the sitemap links and press Enter to open a page. </p>
+
+         <!-- Legend explaining the meaning of the sitemap elements -->
+         <p class="legend">
+            <span><strong>Rounded boxes</strong> = pages</span>
+            <span><strong>Lines</strong> = website structure</span>
+            <span><strong>Highlighted box</strong> = current page</span>
+         </p>
+
+         <!-- Accessibility note for keyboard users -->
+         <p class="page-note">
+            Use Tab to move through the sitemap links and press Enter to open a page.
+         </p>
       </main>
       
+      <!-- Footer with branding and links to page editors and validation pages -->
       <footer>
          <div class="brand2">
             <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img"> 
             <h1 class="logo">Gender Equality Website</h1>
             <p class="tagline">Promoting fairness, equality, and opportunity for all</p>
          </div>
+
+         <!-- Page editor links -->
          <div class="footer-column">
             <p>Page Editor</p>
-            <a href="pageEditor_ST1.html">Ayesha</a> <a href="pageEditor_ST2.html">Inayah</a> <a href="pageEditor_ST3.html">Joyana</a> <a href="pageEditor_ST4.html">Shaniqua</a> 
+            <a href="pageEditor_ST1.html">Ayesha</a>
+            <a href="pageEditor_ST2.html">Inayah</a>
+            <a href="pageEditor_ST3.html">Joyana</a>
+            <a href="pageEditor_ST4.html">Shaniqua</a> 
          </div>
+
+         <!-- Validation links -->
          <div class="footer-column">
             <p>Validation</p>
-            <a href="validation_ST1.html">Ayesha</a> <a href="validation_ST2.html">Inayah</a> <a href="validation_ST3.html">Joyana</a> <a href="validation_ST4.html">Shaniqua</a> 
+            <a href="validation_ST1.html">Ayesha</a>
+            <a href="validation_ST2.html">Inayah</a>
+            <a href="validation_ST3.html">Joyana</a>
+            <a href="validation_ST4.html">Shaniqua</a> 
          </div>
       </footer>
    </body>
