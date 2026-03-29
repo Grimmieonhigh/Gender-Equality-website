@@ -322,6 +322,49 @@ ul{
 }
 
 
+/* Student 2 - AIS styling for action cards and more */
+
+.ais-intro {
+    text-align: center;
+    padding: 20px;
+}
+
+.ais-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.ais-card {
+    width: 200px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ais-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.ais-card:hover {
+    transform: scale(1.05);
+}
+
+.ais-card.selected {
+    border: 3px solid green;
+    background: #e6ffe6;
+}
+
+.ais-results {
+    text-align: center;
+    margin-top: 20px;
+}
+
 /* STUDENT 4 CUSTOM STYLES (SITEMAP + PROFILE)
    Scoped so it does NOT affect other pages */
 
