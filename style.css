@@ -13,6 +13,7 @@
     --accent-brown-dark: #A67C52;
     --accent-brown-light: #E8D8C3;
     --accent-brown-verylight: #F5EDE6;
+    --accent-green-dark: ##008000;
 }
 
 body{
@@ -323,6 +324,10 @@ ul{
 
 
 /* Student 2 - AIS styling for action cards and more */
+
+.ais-page{
+    color var(--accent-green-dark);
+}
 
 .ais-intro {
     text-align: center;
