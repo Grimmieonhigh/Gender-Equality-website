@@ -1,15 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Editor Student 3</title>
-  <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Page Editor ST3 | Joyana Jude Varadaraj</title>
+ <link rel="stylesheet" href="style.css">
+
+ <style>
+   * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+   }
+
+
+   html {
+     scroll-behavior: smooth;
+   }
+
+
+   body {
+     font-family: "Times New Roman", Times, serif;
+     background: #f9fcff;
+     color: #333;
+     line-height: 1.7;
+   }
+
+
+   header {
+     background: linear-gradient(90deg, #cfe8ff, #ffd6e8, #d8f3dc);
+     padding: 24px;
+     text-align: center;
+     border-bottom: 3px solid #b8d8f8;
+   }
+
+
+   header h1 {
+     color: #355070;
+     margin-bottom: 8px;
+   }
+
+
+   header p {
+     color: #4a4a4a;
+   }
+
+
+   main {
+     width: 90%;
+     max-width: 1200px;
+     margin: 30px auto;
+   }
+
+
+   section {
+     background: #ffffff;
+     margin-bottom: 28px;
+     padding: 24px;
+     border-radius: 18px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+   }
+
+
+   h2 {
+     color: #355070;
+     margin-bottom: 14px;
+     border-bottom: 2px solid #d8f3dc;
+     padding-bottom: 8px;
+   }
+
+
+   h3 {
+     color: #355070;
+     margin: 18px 0 10px;
+   }
+
+
+   p, li {
+     margin-bottom: 10px;
+   }
+
+
+   .contents-box {
+     background: linear-gradient(180deg, #eef7ff, #fff0f6);
+     border: 2px solid #d8f3dc;
+   }
+
+
+   .contents-box ul {
+     list-style: none;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+     gap: 12px;
+     margin-top: 14px;
+   }
+
+
+   .contents-box a {
+     display: block;
+     text-decoration: none;
+     text-align: center;
+     background: #bde0fe;
+     color: #1d3557;
+     padding: 12px 14px;
+     border-radius: 12px;
+     font-weight: bold;
+     transition: 0.3s ease;
+   }
+
+
+   .contents-box a:hover {
+     background: #ffc8dd;
+     transform: translateY(-2px);
+   }
+
+
+   .task-box {
+     background: #fffafc;
+     border: 2px solid #ffd6e8;
+     border-radius: 16px;
+     padding: 18px;
+     margin-top: 14px;
+   }
+
+
+   .link-list a,
+   footer a,
+   .inline-link {
+     color: #355070;
+     font-weight: bold;
+     text-decoration: none;
+   }
+
+
+   .link-list li {
+     margin-left: 20px;
+   }
+
+
+   .highlight {
+     background: linear-gradient(90deg, #d8f3dc, #eef7ff);
+     border: 2px solid #cfe8ff;
+     border-radius: 14px;
+     padding: 18px;
+     margin-top: 14px;
+   }
+
+
+   table {
+     width: 100%;
+     border-collapse: collapse;
+     margin-top: 14px;
+     overflow-x: auto;
+     display: block;
+   }
+
+
+   th, td {
+     border: 1px solid #cfe8ff;
+     padding: 12px;
+     text-align: left;
+     vertical-align: top;
+     background: #ffffff;
+   }
+
+
+   th {
+     background: #eef7ff;
+     color: #355070;
+   }
+
+
+   .top-btn {
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     text-decoration: none;
+     background: #bde0fe;
+     color: #1d3557;
+     padding: 12px 16px;
+     border-radius: 14px;
+     font-weight: bold;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+     transition: 0.3s ease;
+   }
+
+
+   .top-btn:hover {
+     background: #ffd6e8;
+     transform: scale(1.05);
+   }
+
+
+   footer {
+     text-align: center;
+     padding: 20px;
+     background: #eef7ff;
+     border-top: 2px solid #d8f3dc;
+     color: #355070;
+   }
+
+
+   @media (max-width: 600px) {
+     main {
+       width: 95%;
+     }
+   }
+ </style>
 </head>
-<body>
-  <main>
-    <h1>Page Editor - Student 3</h1>
-    <p>This page will explain Student 3's contribution later.</p>
-  </main>
+<body id="top">
+
+
+ <header class="site-header">
+    <div class="header-container">
+        <div class="brand">
+            <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
+            <h1 class="logo">Gender Equality Website</h1>
+        </div>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="ais.html">Action Impact Simulator</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="profile.html">User Profile</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="team.html">Team Page</a>
+            <a href="sitemap.html">Sitemap</a>
+        </nav>
+    </div>
+</header>
+
+
+ <main>
+  <h1>Page Editor - Student 3</h1>
+   <p>Technical report, reflection, and contribution record for Joyana Jude Varadaraj</p>
+
+   <section class="contents-box">
+     <h2>Contents</h2>
+     <ul>
+       <li><a href="#overview">Student Overview</a></li>
+       <li><a href="#feedback-page">Feedback Page</a></li>
+       <li><a href="#team-page">Team Page</a></li>
+       <li><a href="#content-page">Content Page</a></li>
+       <li><a href="#challenges">Challenges and Lessons Learned</a></li>
+       <li><a href="#accessibility">Accessibility</a></li>
+       <li><a href="#janet">JANET Compliance</a></li>
+       <li><a href="#meetings">Meetings and Contribution Log</a></li>
+       <li><a href="#references">References</a></li>
+     </ul>
+   </section>
+
+
+   <section id="overview">
+     <h2>Student Name and Role</h2>
+     <p><strong>Name:</strong> Joyana Jude Varadaraj</p>
+     <p><strong>Student ID:</strong> W2134634</p>
+     <p><strong>Role:</strong> Student 3 - Feedback & Program Directory, Team Page, and Content Page</p>
+
+
+     <div class="task-box">
+       <h3>Completed Pages / Tasks</h3>
+       <ul>
+         <li>Finished <strong>feedback.html</strong> with a scrollable programme directory, ratings and reviews section, and a JavaScript-enhanced feedback form.</li>
+         <li>Completed <strong>team.html</strong> with interactive team member thumbnails, hover effects, and expandable contribution details.</li>
+         <li>Implemented <strong>content_ST3.html</strong> focused on SDG 5: Gender Equality, including internal navigation, section linking, images, and a fixed “Go to Top” button.</li>
+       </ul>
+     </div>
+
+
+     <div class="task-box">
+       <h3>Links to Implemented Pages</h3>
+       <ul class="link-list">
+         <li><a href="feedback.html" target="_blank">Open feedback.html</a></li>
+         <li><a href="team.html" target="_blank">Open team.html</a></li>
+         <li><a href="content_ST3.html" target="_blank">Open content_ST3.html</a></li>
+       </ul>
+     </div>
+   </section>
+
+
+   <section id="feedback-page">
+     <h2>Feedback Page</h2>
+     <p>
+       The feedback page was designed to provide users with a clear and engaging way to explore gender equality opportunities and submit feedback. The page contains three main parts: a scrollable programme directory, a ratings and reviews section, and an interactive feedback form. I used a consistent pastel blue, pink, and green visual theme so that the page matched the rest of the website while still feeling approachable and eye catchy.
+     </p>
+
+
+     <h3>HTML Structure</h3>
+     <p>
+       The page uses a clear semantic structure with <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, multiple <code>&lt;section&gt;</code> elements, and a <code>&lt;footer&gt;</code>. Inside the programme directory, I used <code>&lt;article&gt;</code> cards for each opportunity so that the content was grouped logically. For the form, I used <code>&lt;form&gt;</code>, <code>&lt;fieldset&gt;</code>, and <code>&lt;legend&gt;</code> to separate personal details from feedback details, which helped make the structure clearer and easier to use.
+     </p>
+
+
+     <h3>CSS Techniques</h3>
+     <p>
+       I used CSS Grid to organise the programme cards, review cards, and form rows. Rounded corners, shadows, gradients, and consistent spacing were applied to create a soft and readable design. Hover effects were used on programme buttons, navigation links, and submit/reset buttons to give immediate visual feedback. I also created a scrollable area for the programme cards so that users could browse the opportunities without the section becoming too long.
+     </p>
+
+
+     <h3>Design Choices</h3>
+     <p>
+       I chose a card based layout because it allowed the programmes and reviews to be presented in a structured and visually balanced way. The scrollable programme section was useful because it improved usability by keeping the page compact. The feedback form was designed with clear labels and section grouping so users could understand it easily. JavaScript was used to add a live character counter, check user input, highlight errors and display a confirmation message for submission. </p>
+
+
+     <div class="highlight">
+       <h3>Validation Links</h3>
+       <p><a class="inline-link" href="validation_ST3.html#feedback-validation">View feedback page validation evidence</a></p>
+     </div>
+   </section>
+
+
+   <section id="team-page">
+     <h2>Team Page</h2>
+     <p>
+       The team page was created to introduce the people behind the website and explain each member’s role and contribution. The main purpose of this page was to present team information in a more interactive way rather than using a simple list of names.
+     </p>
+
+
+     <h3>HTML Structure</h3>
+     <p>
+       The page uses the same shared structure with a header, navigation bar, main content area, and footer. Within the main section, I used a team grid containing one block for each group member. Each block includes an image, the member’s name, role, pages/features contributed to, and a short contribution summary. The details are placed inside an overlay panel so that extra information can appear within the same card.
+     </p>
+
+
+     <h3>CSS Techniques</h3>
+     <p>
+       CSS grid was used to make the four team member cards look evenly displayed. I used transitions, transform, and opacity to create a hover and focus effect. When the user hovers over or focuses on a card, the image becomes faded and slightly enlarged, while the overlay panel slides up into view. This created a smoother and more interactive presentation while keeping the design visually consistent with the rest of the website.
+     </p>
+
+
+     <h3>Design Choices</h3>
+     <p>
+       I chose an overlay layout because it allowed the team details to stay hidden until needed, which made the page cleaner and more visually engaging. The hover and focus states were important because the coursework specifically asked for interactive thumbnails and expandable details. I also added <code>tabindex="0"</code> to each interactive team block so keyboard users can access the same content, which improved accessibility.
+     </p>
+
+
+     <div class="highlight">
+       <h3>Validation Links</h3>
+       <p><a class="inline-link" href="validation_ST3.html#team-validation">View team page validation evidence</a></p>
+     </div>
+   </section>
+
+
+   <section id="content-page">
+     <h2>Content Page</h2>
+     <p>
+       My content page focuses on 'Representations of Women in Media' explaining how media can shape views, reinforce stereotypes, and influence how women are viewed in society. The page is organised into clear sections with relevant images and headings, making the information easy to understand while also keeping it engaging and accessible for users. </p>
+
+
+     <h3>HTML Structure</h3>
+     <p>
+       I structured the page using one main <code>&lt;h1&gt;</code> title and several <code>&lt;h2&gt;</code> section headings. Each major content area was placed inside its own <code>&lt;section&gt;</code> element with a unique <code>id</code>. At the top of the page, I included an internal navigation area using anchor links so users could jump directly to the section they wanted. I also added a “Go to Top” button linked to the top of the page using an internal anchor.
+     </p>
+
+
+     <h3>CSS Techniques</h3>
+     <p>
+       I kept the same pastel theme as my other pages so the content page looked consistent with the site. Page-specific CSS was used for the internal navigation box, image cards, highlight box, mini-cards, and the fixed “Go to Top” button. I used grid layout in the two-column section and responsive image styling with borders, rounded corners, and shadows to make the images support the content visually.
+     </p>
+
+
+     <h3>Design Choices</h3>
+     <p>
+       I used internal navigation because the page contains several sections and the brief required meaningful internal linking for longer pages. The “Go to Top” button was included to improve usability and make it easier to move back to the top without scrolling manually. I chose a mix of text sections, lists, and images so the content would feel more engaging and not appear too dense. The content was written in an original way and focused on action, fairness, and student relevance.
+     </p>
+
+
+     <div class="highlight">
+       <h3>Validation Links</h3>
+       <p><a class="inline-link" href="validation_ST3.html#content-validation">View content page validation evidence</a></p>
+     </div>
+   </section>
+
+
+   <section id="challenges">
+     <h2>Challenges and Lessons Learned</h2>
+     <p>
+       One challenge I faced was keeping all three pages visually consistent while still making each one look appropriate for its own purpose. I solved this by reusing the same colour palette, rounded sections, and navigation style across my pages, while adding page specific elements such as overlays, scroll containers, and internal links where needed.
+     </p>
+     <p>
+       Another challenge was making sure the feedback form had enough JavaScript interactivity to meet the coursework requirements. I fixed this by adding a live character counter, custom error messages, invalid field highlighting, and a confirmation message after successful validation. This helped me understand how JavaScript can be used to improve the user experience rather than relying only on HTML form validation.
+     </p>
+     <p>
+       I also learned the importance of checking file names, navigation links, and footer links carefully. Small mistakes in link names can stop pages opening properly, so testing each page repeatedly was necessary. Overall, this coursework improved my understanding of semantic HTML, CSS layout techniques, accessibility, and how to combine structure, styling, and interactivity in a more organised way.
+     </p>
+   </section>
+
+
+   <section id="accessibility">
+     <h2>Accessibility Considerations</h2>
+     <p>
+       Accessibility was considered throughout my pages in several ways. I used semantic HTML structure so the content is organised clearly using headers, navigation, sections, and footers. This makes the pages easier to read and more understandable.
+     </p>
+     <p>
+       All images include descriptive alt text so users who cannot see the images can still understand their purpose. Form fields on the feedback page have clear labels, and related inputs are grouped using fieldset and legend to improve usability. On the team page, keyboard accessibility was improved by adding <code>tabindex="0"</code> to each interactive team card and using focus styles alongside hover effects.
+     </p>
+     <p>
+       I also used readable font sizing, clear colour contrast, visible section separation, and structured headings. These choices help users scan the pages more easily and make the pages more inclusive.
+     </p>
+   </section>
+
+
+   <section id="janet">
+     <h2>Compliance with JANET Regulations</h2>
+     <p>
+       I was responsible with web publishing when creating my pages. The content is appropriate for an academic setting, focused on education and awareness, and does not include harmful, misleading, or offensive material. The pages are designed to support the coursework theme in a respectful and also professional way.
+     </p>
+     <p>
+       I also used external resources carefully. Images were taken from online royalty free style sources for development purposes, and these should be properly referenced in the final submission. I made sure my work is my own by producing original written content and by describing my own implementation decisions honestly within this Page Editor.
+     </p>
+     <p>
+       Overall, my work reflects responsible use of web content, appropriate communication, and professional behaviour suitable for university publication.
+     </p>
+   </section>
+
+
+<section id="meetings">
+ <h2>Group Meetings and Individual Contribution Log</h2>
+ <p>
+   This section records six group meetings and my individual contribution to the project.
+ </p>
+
+
+ <table>
+   <thead>
+     <tr>
+       <th>Meeting</th>
+       <th>Date &amp; Time</th>
+       <th>Format</th>
+       <th>Objective</th>
+       <th>Attended</th>
+       <th>My Individual Contribution</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>1</td>
+       <td>09/03<br>1PM</td>
+       <td>Online</td>
+       <td>Agree on roles</td>
+       <td>Yes</td>
+       <td>I agreed to take responsibility for Student 3 pages, including the content page, feedback page, team page, validation page, and page editor.</td>
+     </tr>
+     <tr>
+       <td>2</td>
+       <td>12/03<br>4PM</td>
+       <td>Face-to-Face</td>
+       <td>Discuss the template, website theme and colour scheme</td>
+       <td>Yes</td>
+       <td>I agreed on the chosen pastel colour scheme and overall website style so my pages would stay consistent with the rest of the group website.</td>
+     </tr>
+     <tr>
+       <td>3</td>
+       <td>15/03<br>3PM</td>
+       <td>Online</td>
+       <td>Work on template and page structures</td>
+       <td>Yes</td>
+       <td>I created and styled my page structures, including the layout for the feedback page, content page, and team page, and made sure the navigation and footer matched the shared template.</td>
+     </tr>
+     <tr>
+       <td>4</td>
+       <td>17/03<br>1PM</td>
+       <td>Face-to-Face</td>
+       <td>Overview of pages and completing pages</td>
+       <td>Yes</td>
+       <td>I developed my content page on the representation of women in media, added the team page member cards and overlays, and continued building the feedback page sections and form.</td>
+     </tr>
+     <tr>
+       <td>5</td>
+       <td>19/03<br>4PM</td>
+       <td>Face-to-Face</td>
+       <td>Overview of pages and completing pages</td>
+       <td>Yes</td>
+       <td>I completed the validation page and page editor, added screenshots of validation results, and refined the feedback form with JavaScript validation, character counting, and confirmation messaging.</td>
+     </tr>
+     <tr>
+       <td>6</td>
+       <td>26/03<br>4PM</td>
+       <td>Face-to-Face</td>
+       <td>Finishing up</td>
+       <td>Yes</td>
+       <td>I checked all of my pages, tested links, corrected validation issues, improved consistency across the team, feedback, content, validation, and page editor pages, and made sure everything was ready for submission.</td>
+     </tr>
+   </tbody>
+ </table>
+</section>
+
+
+   <section id="references">
+     <h2>References</h2>
+     <b><p>
+These are the resources I used:      </p></b>
+     <ul>
+       <li>University lecture notes and Blackboard materials for Web Design and Development.</li>
+       <li>W3C HTML Validator. Available at: <a class="inline-link" href="https://validator.w3.org/" target="_blank">https://validator.w3.org/</a></li>
+       <li>W3C CSS Validator. Available at: <a class="inline-link" href="https://jigsaw.w3.org/css-validator/" target="_blank">https://jigsaw.w3.org/css-validator/</a></li>
+       <li>Unsplash image resources used for development and page design.</li>
+     </ul>
+   </section>
+
+
+ </main>
+
+
+ <a href="#top" class="top-btn">Top ↑</a>
+
+
+<footer>
+    <div class="brand2">
+      <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
+      <h1 class="logo">Gender Equality Website</h1>
+      <p class="tagline">Promoting fairness, equality, and opportunity for all</p>
+    </div>
+    <div class="footer-column">
+      <p>Page Editor</p>
+      <a href="pageEditor_ST1.html">Student 1</a>
+      <a href="pageEditor_ST2.html">Student 2</a>
+      <a href="pageEditor_ST3.html">Student 3</a>
+      <a href="pageEditor_ST4.html">Student 4</a>
+    </div>
+
+    <div class="footer-column">
+      <p>Validation</p>
+      <a href="validation_ST1.html">Student 1</a>
+      <a href="validation_ST2.html">Student 2</a>
+      <a href="validation_ST3.html">Student 3</a>
+      <a href="validation_ST4.html">Student 4</a>
+    </div>
+  </footer>
+
+
 </body>
 </html>
