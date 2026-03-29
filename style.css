@@ -402,6 +402,45 @@ ul{
     font-weight: bold;
 }
 
+/* Student 2 - Content Page styling and more */
+
+.internal-nav-st2 { text-align: center; margin: 20px 0; }
+
+.internal-nav-st2 a {
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+st2section {
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+st2section img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.top-btn-st2 {
+    display: block;
+    text-align: center;
+    margin: 30px auto;
+    width: 150px;
+    padding: 10px;
+    background: #ff69b4;
+    color: white;
+    border-radius: 10px;
+}
+
+
+
+
+
 /* STUDENT 4 CUSTOM STYLES (SITEMAP + PROFILE)
    Scoped so it does NOT affect other pages */
 
