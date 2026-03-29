@@ -3,202 +3,247 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Editor - Student 4</title>
+  <title>Page Editor Student 4</title>
   <link rel="stylesheet" href="style.css">
 
   <style>
-    
-  body.page-editor-page {
-    background-color: var(--background);
-  }
+    :root{
+      --accent-brown-soft: #f5ede6;
+      --accent-brown-mid: #e8d8c3;
+      --accent-brown-main: #c8a27a;
+      --accent-brown-dark: #a67c52;
+      --white: #fff;
+    }
 
-  .page-editor-page .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 30px;
-    box-shadow: var(--shadow);
-    max-width: 900px;
-    margin: 40px auto;
-  }
+    .section1{
+      background-color: var(--accent-brown-soft);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 40px 50px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      max-width: 850px;
+      margin: 40px auto;
+    }
 
-  .page-editor-page h2,
-  .page-editor-page h3 {
-    color: var(--accent-brown-dark);
-  }
+    .section2{
+      background-color: var(--accent-brown-main);
+      color: var(--white);
+      text-align: center;
+      border-radius: 14px;
+      padding: 40px 50px;
+      max-width: 850px;
+      margin: 40px auto;
+    }
 
-  .page-editor-page .paragraph {
-    font-size: 17px;
-    line-height: 1.7;
-    color: var(--text-main);
-  }
+    .title1{
+      color: var(--accent-brown-dark);
+      text-align: center;
+    }
 
-  .page-editor-page a {
-    color: var(--accent-brown-dark);
-    font-weight: 600;
-    text-decoration: none;
-  }
+    .section-nav{
+      text-align: center;
+      margin: 20px 0;
+    }
 
-  .page-editor-page a:hover {
-    text-decoration: underline;
-  }
+    .section-nav a{
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 5px;
+      background-color: var(--accent-brown-main);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
 
-  .page-editor-page ul {
-    color: var(--text-main);
-    line-height: 1.6;
-  }
-
-  .page-editor-page h3 {
-    margin-top: 30px;
-  }
-
-  /* NAVBAR (ONLY THIS PAGE) */
-  .page-editor-page .navbar a.active {
-    background-color: var(--accent-brown);
-    color: white;
-    border-color: var(--accent-brown-dark);
-  }
-
-  .page-editor-page .navbar a:hover {
-    background-color: var(--accent-brown-light);
-    border-color: var(--accent-brown);
-  }
+    .section-nav a:hover{
+      background-color: var(--accent-brown-dark);
+    }
   </style>
-
 </head>
 
-<body class="profile-page page-editor-page">
+<body id="top" class="profile-page page-editor-page">
 
-  <header class="site-header">
-    <div class="header-container">
-      <div class="brand">
-        <img src="images/Gender_equality_symbol_(clipart).png" alt="Logo" class="logo-img">
-        <h1 class="logo">Gender Equality Website</h1>
-      </div>
-
-      <nav class="navbar">
-        <a href="home.html">Home</a>
-        <a href="ais.html">Action Impact Simulator</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="profile.html">User Profile</a>
-        <a href="feedback.html">Feedback</a>
-        <a href="team.html">Team Page</a>
-        <a href="sitemap.html">Sitemap</a>
-      </nav>
+<header class="site-header">
+  <div class="header-container">
+    <div class="brand">
+      <img src="images/Gender_equality_symbol_(clipart).png" alt="Logo" class="logo-img">
+      <h1 class="logo">Gender Equality Website</h1>
     </div>
-  </header>
 
-  <main class="card">
+    <nav class="navbar">
+      <a href="home.html">Home</a>
+      <a href="ais.html">Action Impact Simulator</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="profile.html">User Profile</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="team.html">Team Page</a>
+      <a href="sitemap.html">Sitemap</a>
+    </nav>
+  </div>
+</header>
 
-    <h2>Page Editor - Student 4</h2>
+<main class="card">
 
-    <p class="paragraph">
-      <strong>Name:</strong> Shaniqua Henry<br>
-      <strong>Role:</strong> Student 4<br>
-      <strong>Completed pages:</strong> User Profile, Sitemap, Content Page
+  <nav class="section-nav">
+    <a href="#overview">Overview</a>
+    <a href="#profile">User Profile</a>
+    <a href="#sitemap">Sitemap</a>
+    <a href="#content">Content Page</a>
+    <a href="#accessibility">Accessibility</a>
+    <a href="#compliance">Compliance</a>
+    <a href="#challenges">Challenges</a>
+    <a href="#references">References</a>
+  </nav>
+
+  <section class="section2">
+    <h1>Shaniqua Henry - Page Editor</h1>
+    <p>Student 4 | Profile, Sitemap & Content Page</p>
+  </section>
+
+  <section class="section1" id="overview">
+    <h2 class="title1">Overview</h2>
+    <p class="paragraph">  My role in this project was to design and develop the User Profile page, the Sitemap, and my content page on the gender pay gap. I focused on creating pages that are interactive, visually consistent, and meaningful to the user while still fitting into the 
+  shared group design. I aimed to make my pages not only functional but also engaging, ensuring that users could easily navigate through the content and understand the purpose of each page. For example, I introduced interactivity in the User Profile page through step-by-step prompts and a progress system, which helps guide users and improves their overall experience.
+      
+    I also ensured consistency across my pages by using a brown accent colour scheme and similar layout structures. This helped create a clear visual identity for my work while still matching the overall theme of the website.
+      
+    Additionally, I focused on making my content meaningful and relevant. In my content page, I explored the gender pay gap in a more personal and engaging way, highlighting not just the facts but also the real-world impact on women. Overall, my goal was to create pages that are clear, interactive, and informative, while also encouraging users to reflect on the importance of gender equality.  
+    </p>
+  </section>
+
+  <section class="section1" id="profile">
+    <h2 class="title1">User Profile</h2>
+    <p class="paragraph">For the User Profile page, I designed an interactive experience using JavaScript to guide users through a structured, step-by-step process. 
+  I divided the profile into three stages (basic details, views and interests, and actions and goals) so that the task feels manageable 
+  and less overwhelming for the user.
+
+  One of my main priorities was improving user experience, so I included a progress bar and a live summary section. This allows users 
+  to clearly see how much of their profile has been completed and how their responses are being used, making the interaction feel more 
+  meaningful and responsive.
+
+  I also implemented input validation to improve data quality and usability. The age field only accepts numeric values, while the name 
+  and role fields only accept alphabetic characters. This ensures that the data entered is accurate and prevents user errors.
+
+  From a design perspective, I used a card-based layout with clear spacing and a consistent brown accent colour scheme. I scoped my CSS 
+  using page-specific classes to ensure that my styling did not affect other group members’ pages. This demonstrates good practice in 
+  collaborative web development.
     </p>
 
     <p class="paragraph">
-      This page explains the design, structure, and development of my assigned pages.
-      My aim was to create interactive, visually consistent, and meaningful pages that
-      both inform users and provide a smooth user experience.
+      I also implemented validation so age only accepts numbers, and name/role only accept letters. This improves data accuracy.
     </p>
 
-    <h3>📄 User Profile</h3>
-    <p class="paragraph">
-      The User Profile page was designed to be interactive and engaging. I used JavaScript
-      to guide users through a step-by-step process where they enter their details,
-      views, and personal goals related to gender equality.
+    <a href="profile.html">Go to User Profile</a><br>
+    <a href="validation_ST4.html#val-profile">View validation</a>
+  </section>
+
+  <section class="section1" id="sitemap">
+    <h2 class="title1">Sitemap</h2>
+    <p class="paragraph"> For the Sitemap page, I used SVG to create a structured and visually clear representation of the website’s layout. I chose SVG 
+  because it allows precise positioning and ensures that the diagram remains scalable and sharp on different screen sizes.
+
+  I organised the sitemap into three clear levels: entry page, main pages, and content pages. I made sure that the order of the 
+  main pages matches the navigation bar, as this improves usability and helps users understand how the website is structured.
+
+  A key focus for me was alignment and spacing. I carefully adjusted connector lines and node positions so that all elements are 
+  evenly spaced and visually balanced. This required multiple refinements, especially to ensure that section labels sit correctly 
+  between lines.
+
+  I also applied a consistent brown colour theme to match my other pages, reinforcing a strong visual identity. Interactive elements, 
+  such as hover effects and highlighting the current page, were added to make the sitemap more engaging and user-friendly.
     </p>
 
-    <p class="paragraph">
-      A progress bar was included to visually show completion, improving user experience.
-      I also implemented input validation so that the age field only accepts numbers,
-      while name and role only accept letters. This ensures accurate data and improves usability.
-    </p>
+    <a href="sitemap.html">Go to Sitemap</a><br>
+    <a href="validation_ST4.html#val-sitemap">View validation</a>
+  </section>
 
-    <p class="paragraph">
-      The design uses a clean card layout and a brown accent colour scheme to maintain
-      consistency with my other pages while still fitting into the overall website design.
-    </p>
+  <section class="section1" id="content">
+    <h2 class="title1">Content Page</h2>
+    <p class="paragraph"> My content page focuses on the gender pay gap, which I chose because it is a significant and ongoing issue within gender equality. 
+  I wanted my content to go beyond simply presenting facts, so I wrote it in a more personal and reflective tone to highlight how 
+  this issue affects real people.
 
-    <p class="paragraph">
-      <a href="profile.html">View User Profile</a>
-    </p>
+  I structured the page using clear headings, paragraphs, and lists to guide the reader through the topic. This includes sections 
+  explaining what the gender pay gap is, why it exists, its real-world impact, and how it can be reduced. This logical structure 
+  improves readability and helps users understand the topic more easily.
 
-    <h3>🗺️ Sitemap</h3>
-    <p class="paragraph">
-      The sitemap was created using SVG to visually represent the structure of the website.
-      This allowed me to precisely position elements and ensure the layout is clear and readable.
-    </p>
+  I also included multiple images throughout the page to break up large sections of text and make the page more visually engaging. 
+  This creates a better balance between content and design.
 
-    <p class="paragraph">
-      I organised the sitemap into three sections: entry page, main pages, and content pages.
-      The layout follows the same order as the navigation bar, making it easier for users to understand.
-    </p>
-
-    <p class="paragraph">
-      I carefully adjusted spacing and alignment so that all elements sit evenly between connector lines.
-      This improved the visual balance and professionalism of the design.
-    </p>
-
-    <p class="paragraph">
-      <a href="sitemap.html">View Sitemap</a>
-    </p>
-
-    <h3>📊 Content Page - Gender Pay Gap</h3>
-    <p class="paragraph">
-      My content page focuses on the gender pay gap, a significant issue affecting women globally.
-      I aimed to make the content both informative and personal, explaining not only the facts
-      but also why this issue matters.
+  One of my key aims was to make the reader think critically about the issue. By combining factual information with a more human 
+  perspective, I wanted to emphasise that the gender pay gap is not just a statistic, but something that affects women’s financial 
+  independence, opportunities, confidence, and long-term security.
     </p>
 
     <p class="paragraph">
-      I used structured sections, including key facts, causes, impacts, and solutions,
-      to guide the reader through the topic clearly. Images were added throughout the page
-      to improve engagement and break up large sections of text.
+      I used headings, lists, and images to structure the page clearly and improve readability.
     </p>
 
-    <p class="paragraph">
-      I also used a more human and passionate tone to make the content more relatable,
-      highlighting how the gender pay gap affects women's opportunities, confidence,
-      and long-term financial security.
+    <a href="content_ST4.html">Go to Content Page</a><br>
+    <a href="validation_ST4.html#val-content">View validation</a>
+  </section>
+
+  <section class="section1" id="accessibility">
+    <h2 class="title1">Accessibility</h2>
+    <p class="paragraph"> Accessibility was an important consideration across all of my pages. I used clear headings and a logical structure so that 
+  content is easy to follow and navigate. This benefits all users, including those using assistive technologies.
+
+  I ensured that all images include appropriate alt text so that screen readers can describe the content. I also used readable 
+  font sizes, consistent spacing, and good colour contrast to improve visibility and readability.
+
+  Interactive elements such as buttons and navigation links are clearly styled and easy to identify. On the User Profile page, 
+  the step-by-step layout and progress bar help users understand their position within the process, which improves usability 
+  and reduces confusion.
     </p>
+  </section>
 
-    <p class="paragraph">
-      <a href="content_ST4.html">View Content Page</a>
+  <section class="section1" id="compliance">
+    <h2 class="title1">JANET Compliance</h2>
+    <p class="paragraph"> I ensured that my work complies with JANET regulations by producing appropriate, respectful, and educational content throughout 
+  my pages. All information included is relevant to the theme of gender equality and is presented in a responsible manner.
+
+  I avoided using any offensive or inappropriate material and ensured that my work is original. Where information was influenced 
+  by external sources, I made sure it was based on reliable and credible references.
+
+  Images were used appropriately to support the content and were selected to match the educational purpose of the website. 
+  Overall, I ensured that my pages meet the expected standards for ethical and responsible web content.
     </p>
+  </section>
 
-    <h3>⚠️ Challenges and Solutions</h3>
-    <p class="paragraph">
-      One challenge I faced was ensuring my styles did not affect other group members' pages.
-      I solved this by using page-specific classes to scope my CSS.
+  <section class="section1" id="challenges">
+    <h2 class="title1">Challenges</h2>
+    <p class="paragraph"> One of the main challenges I faced was working within a shared project while ensuring that my styling did not interfere with 
+  other group members’ pages. I solved this by using page-specific classes, such as profile-page and sitemap-page, to scope my CSS.
+
+  Another challenge was positioning elements accurately within the SVG sitemap. Small changes in coordinates could significantly 
+  affect the layout, so I had to carefully adjust spacing, connector lines, and alignment multiple times to achieve a balanced result.
+
+  I also encountered challenges when implementing JavaScript features, particularly ensuring that user input was handled correctly 
+  and displayed dynamically. Through testing and refinement, I was able to improve my understanding of JavaScript logic and debugging.
+
+  Overall, these challenges helped me develop stronger problem-solving skills and a better understanding of how design and functionality 
+  work together in web development.
     </p>
+  </section>
 
-    <p class="paragraph">
-      Another challenge was aligning elements in the sitemap correctly.
-      This required careful adjustment of positions and spacing within the SVG.
+  <section class="section1" id="references">
+    <h2 class="title1">References</h2>
+    <p class="paragraph">  I used a range of reliable resources to support my work, including course materials, W3Schools, and MDN Web Docs for HTML, CSS, 
+  and JavaScript guidance. I also researched information related to gender equality and the gender pay gap from trusted sources.
+
+  These references helped ensure that my content is accurate, relevant, and aligned with the aims of the project.
     </p>
+  </section>
 
-    <h3>♿ Accessibility</h3>
-    <p class="paragraph">
-      I used clear headings, readable text, and alt text for images to improve accessibility.
-      The structured layout and navigation also help users easily move through the site.
-    </p>
+</main>
 
-    <h3>📚 References</h3>
-    <ul>
-      <li>W3Schools</li>
-      <li>Youtube videos (for gender pay gap information, java and css)</li>
-      <li>Course materials</li>
-    </ul>
+<footer>
+  <p><a href="validation_ST4.html">Validation</a></p>
+  <p>Student 4 - Shaniqua Henry</p>
+</footer>
 
-  </main>
-
-  <footer>
-    <p><a href="validation_ST4.html">Validation</a></p>
-    <p>Student 4 - Shaniqua Henry | Gender Equality Website</p>
-  </footer>
+<a href="#top" class="back-to-top">Back to top</a>
 
 </body>
 </html>
