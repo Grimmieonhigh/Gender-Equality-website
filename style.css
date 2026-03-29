@@ -358,8 +358,8 @@ ul{
 }
 
 .ais-card.selected {
-    border: 3px solid green;
-    background: #e6ffe6;
+    border: 3px solid #00c853;
+    background: linear-gradient(135deg, #e8f5e9, #c8f7c5);
 }
 
 .ais-results {
