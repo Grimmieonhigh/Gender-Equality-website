@@ -8,57 +8,157 @@
 
   <style>
     :root{
-      --accent-brown-soft: #f5ede6;
-      --accent-brown-mid: #e8d8c3;
-      --accent-brown-main: #c8a27a;
-      --accent-brown-dark: #a67c52;
-      --white: #fff;
+    --accent-brown-soft: #f5ede6;
+    --accent-brown-mid: #e8d8c3;
+    --accent-brown-main: #c8a27a;
+    --accent-brown-dark: #a67c52;
+    --white: #fff;
+  }
+
+  .section1{
+    background-color: var(--accent-brown-soft);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 40px 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    max-width: 850px;
+    margin: 40px auto;
+  }
+
+  .section2{
+    background-color: var(--accent-brown-main);
+    color: var(--white);
+    text-align: center;
+    border-radius: 14px;
+    padding: 40px 50px;
+    max-width: 850px;
+    margin: 40px auto;
+  }
+
+  .title1{
+    color: var(--accent-brown-dark);
+    text-align: center;
+  }
+
+  .section-nav{
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .section-nav a{
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: var(--accent-brown-main);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+
+  .section-nav a:hover{
+    background-color: var(--accent-brown-dark);
+  }
+
+  .page-editor-page .navbar a.active{
+    background-color: var(--accent-brown-main);
+    color: white;
+    border-color: var(--accent-brown-dark);
+  }
+
+  .page-editor-page .navbar a:hover{
+    background-color: var(--accent-brown-mid);
+    border-color: var(--accent-brown-main);
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 30px auto 0;
+    padding-left: 30px;
+    border-left: 4px solid var(--accent-brown-main);
+  }
+
+  .timeline-item {
+    position: relative;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    margin: 0 0 25px 25px;
+    box-shadow: var(--shadow);
+  }
+
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -39px;
+    top: 24px;
+    width: 18px;
+    height: 18px;
+    background: var(--accent-brown-main);
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px var(--accent-brown-dark);
+  }
+
+  .timeline-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .meeting-badge {
+    display: inline-block;
+    background: var(--accent-brown-dark);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.95rem;
+  }
+
+  .meeting-meta {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .timeline-item h3 {
+    margin: 0 0 10px 0;
+    color: var(--accent-brown-dark);
+    font-size: 1.15rem;
+  }
+
+  .timeline-item p {
+    margin: 8px 0;
+    line-height: 1.6;
+    color: var(--text-main);
+  }
+
+  .timeline-label {
+    font-weight: bold;
+    color: var(--accent-brown-dark);
+  }
+
+  @media (max-width: 700px) {
+    .timeline {
+      padding-left: 18px;
     }
 
-    .section1{
-      background-color: var(--accent-brown-soft);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 40px 50px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-      max-width: 850px;
-      margin: 40px auto;
+    .timeline-item {
+      margin-left: 18px;
+      padding: 16px;
     }
 
-    .section2{
-      background-color: var(--accent-brown-main);
-      color: var(--white);
-      text-align: center;
-      border-radius: 14px;
-      padding: 40px 50px;
-      max-width: 850px;
-      margin: 40px auto;
+    .timeline-item::before {
+      left: -31px;
     }
-
-    .title1{
-      color: var(--accent-brown-dark);
-      text-align: center;
-    }
-
-    .section-nav{
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .section-nav a{
-      display: inline-block;
-      padding: 10px 15px;
-      margin: 5px;
-      background-color: var(--accent-brown-main);
-      color: var(--white);
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    .section-nav a:hover{
-      background-color: var(--accent-brown-dark);
-    }
+  }
   </style>
 </head>
 
@@ -229,12 +329,78 @@
 
   <section class="section1" id="references">
     <h2 class="title1">References</h2>
-    <p class="paragraph">  I used a range of reliable resources to support my work, including course materials, W3Schools, and MDN Web Docs for HTML, CSS, 
+    <p class="paragraph">  I used a range of reliable resources to support my work, including youtube videos for information on gender pay gap and javascript, course materials, W3Schools, and MDN Web Docs for HTML, CSS, 
   and JavaScript guidance. I also researched information related to gender equality and the gender pay gap from trusted sources.
 
   These references helped ensure that my content is accurate, relevant, and aligned with the aims of the project.
     </p>
   </section>
+
+  <section class="section1" id="team">
+  <h2 class="title1">Team Meetings</h2>
+
+  <p class="paragraph">
+    The timeline below shows the meetings I attended during the project and highlights my individual contribution as Student 4.
+  </p>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-top">
+        <span class="meeting-badge">Meeting 1</span>
+        <span class="meeting-meta">09/03 • 1PM • Online • Attended: Yes</span>
+      </div>
+      <h3>Agree on roles</h3>
+      <p><span class="timeline-label">My contribution:</span> I agreed to take on Student 4 responsibilities, including the User Profile, Sitemap, and my content page. I also reviewed the home template and understood how it would connect to my pages.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-top">
+        <span class="meeting-badge">Meeting 2</span>
+        <span class="meeting-meta">12/03 • 4PM • Face-to-Face • Attended: Yes</span>
+      </div>
+      <h3>Discuss website theme and structure</h3>
+      <p><span class="timeline-label">My contribution:</span> I contributed to discussions about the overall structure and layout of the website. I also thought about how my pages would fit the shared design while still using a consistent brown theme.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-top">
+        <span class="meeting-badge">Meeting 3</span>
+        <span class="meeting-meta">15/03 • 3PM • Online • Attended: Yes</span>
+      </div>
+      <h3>Work on individual pages</h3>
+      <p><span class="timeline-label">My contribution:</span> I began developing the User Profile page using JavaScript, including the step-by-step prompt system, progress bar, and dynamic summary output.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-top">
+        <span class="meeting-badge">Meeting 4</span>
+        <span class="meeting-meta">17/03 • 1PM • Face-to-Face • Attended: Yes</span>
+      </div>
+      <h3>Review progress and continue development</h3>
+      <p><span class="timeline-label">My contribution:</span> I worked on my Sitemap using SVG, structuring the layout and aligning connectors and labels. I also started building my content page on the gender pay gap.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-top">
+        <span class="meeting-badge">Meeting 5</span>
+        <span class="meeting-meta">19/03 • 4PM • Face-to-Face • Attended: Yes</span>
+      </div>
+      <h3>Continue building and refining pages</h3>
+      <p><span class="timeline-label">My contribution:</span> I refined the design of my pages by improving consistency, spacing, and styling. I also developed my content page further by adding more detail and relevant images.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-top">
+        <span class="meeting-badge">Meeting 6</span>
+        <span class="meeting-meta">26/03 • 4PM • Face-to-Face • Attended: Yes</span>
+      </div>
+      <h3>Final checks and testing</h3>
+      <p><span class="timeline-label">My contribution:</span> I tested all of my pages, including validation for User Profile inputs, sitemap links, and content page structure. I also completed my Page Editor and Validation pages.</p>
+    </div>
+
+  </div>
+</section>
 
 </main>
 
