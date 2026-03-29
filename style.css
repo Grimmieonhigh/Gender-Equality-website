@@ -360,7 +360,6 @@ ul{
 .ais-card.selected {
     border: 3px solid dark green;
     background: #e6ffe6;
-    transform: scale(1.05);
 }
 
 .ais-results {
