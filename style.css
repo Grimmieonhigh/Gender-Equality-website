@@ -363,12 +363,6 @@ ul{
 }
 
 .ais-results {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.impact-box {
     background: green;
     padding: 25px 40px;
     border-radius: 15px;
@@ -376,18 +370,27 @@ ul{
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     text-align: center;
     max-width: 400px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.impact-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 /* Make score BIG */
 #ais-score {
-    font-size: 2rem;
+ 
     font-weight: bold;
     color: #4CAF50;
 }
 
 /* Level styling */
 #ais-level {
-    font-size: 1.2rem;
+    
     margin-top: 10px;
     font-weight: bold;
 }
