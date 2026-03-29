@@ -3,13 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Validation Student 4</title>
+  <title>Validation - Student 4</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root{
+      --accent-brown-soft: #f5ede6;
+      --accent-brown-main: #c8a27a;
+      --accent-brown-dark: #a67c52;
+      --white: #fff;
+    }
+
+    .section{
+      background-color: var(--accent-brown-soft);
+      border-radius: 14px;
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 900px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+
+    .title{
+      color: var(--accent-brown-dark);
+      text-align: center;
+    }
+
+    img{
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+  </style>
 </head>
-<body>
-  <main>
-    <h1>Validation - Student 4</h1>
-    <p>This page will contain validation evidence later.</p>
-  </main>
+
+<body class="profile-page">
+
+<header class="site-header">
+  <div class="header-container">
+    <div class="brand">
+      <img src="images/Gender_equality_symbol_(clipart).png" alt="Logo" class="logo-img">
+      <h1 class="logo">Gender Equality Website</h1>
+    </div>
+
+    <nav class="navbar">
+      <a href="home.html">Home</a>
+      <a href="ais.html">Action Impact Simulator</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="profile.html">User Profile</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="team.html">Team Page</a>
+      <a href="sitemap.html">Sitemap</a>
+    </nav>
+  </div>
+</header>
+
+<main class="card">
+
+  <h2 class="title">Validation - Student 4</h2>
+
+  <section class="section" id="val-profile">
+    <h3>User Profile Validation</h3>
+
+    <p>
+      The User Profile page was tested to ensure all interactive features function correctly. 
+      I verified that each step button correctly triggers prompts and that user input is stored 
+      and displayed dynamically on the page.
+    </p>
+
+    <p>
+      I also tested the validation logic to ensure that the age field only accepts numeric values, 
+      while name and role fields only accept alphabetic characters. Invalid inputs trigger error 
+      messages and require the user to re-enter data.
+    </p>
+
+    <p>
+      The progress bar updates accurately based on completed fields, and skipped items are tracked 
+      and displayed correctly. This confirms that the JavaScript logic works as intended.
+    </p>
+
+    <img src="images/profile-validation.png" alt="User Profile validation screenshot">
+  </section>
+
+  <section class="section" id="val-sitemap">
+    <h3>Sitemap Validation</h3>
+
+    <p>
+      The sitemap was tested to ensure that all links correctly navigate to their respective pages. 
+      Each node in the SVG acts as a clickable link, and hover interactions were checked to confirm 
+      that they respond visually.
+    </p>
+
+    <p>
+      I also validated the structure of the SVG to ensure all elements are correctly aligned and 
+      positioned. The layout was adjusted so that section labels sit evenly between connector lines, 
+      improving readability and visual balance.
+    </p>
+
+    <p>
+      The sitemap was tested across different screen sizes to ensure it scales correctly without 
+      breaking the layout.
+    </p>
+
+
+    <img src="images/sitemap-validation.png" alt="Sitemap validation screenshot">
+  </section>
+
+
+  <section class="section" id="val-content">
+    <h3>Content Page Validation</h3>
+
+    <p>
+      The content page was tested to ensure that all text, images, and links display correctly. 
+      I checked that images load properly and include alt text for accessibility.
+    </p>
+
+    <p>
+      The structure of the page was validated to ensure that headings, paragraphs, and lists are 
+      used correctly. This improves readability and ensures the page is well-organised.
+    </p>
+
+    <p>
+      I also reviewed the content to ensure it is clear, relevant, and appropriate. The layout was 
+      tested to confirm that spacing and styling remain consistent across different screen sizes.
+    </p>
+
+
+    <img src="images/content-validation.png" alt="Content page validation screenshot">
+  </section>
+
+  <section class="section">
+    <h3>Code Validation</h3>
+
+    <p>
+      I used online validation tools such as the W3C HTML and CSS validators to check my code. 
+      Any errors identified were corrected to ensure the pages meet web standards.
+    </p>
+
+    <p>
+      This process helped ensure that my code is clean, well-structured, and free from major 
+      syntax issues.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p><a href="pageEditor_ST4.html">Page Editor</a></p>
+  <p>Student 4 - Shaniqua Henry</p>
+</footer>
+
 </body>
 </html>
