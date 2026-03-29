@@ -141,20 +141,41 @@
     };
 
     let skipped = [];
-
+    
     function askQuestion(key, question) {
-      const answer = prompt(question + " (Type 'skip' to leave blank)");
-
+      let answer = prompt(question + " (Type 'skip' to leave blank)");
+      
       if (answer === null || answer.trim() === "" || answer.trim().toLowerCase() === "skip") {
         profile[key] = "";
         if (!skipped.includes(key)) {
           skipped.push(key);
         }
-      } else {
-        profile[key] = answer.trim();
-        skipped = skipped.filter(item => item !== key);
+        return;
       }
+      
+      answer = answer.trim();
+      
+      if (key === "age") {
+        if (!/^[0-9]+$/.test(answer)) {
+          alert("❌ Age must be numbers only.");
+          askQuestion(key, question);
+          return;
+        }
+      }
+      
+      if (key === "name" || key === "role") {
+        if (!/^[A-Za-z\s-]+$/.test(answer)) {
+          alert("❌ Only letters are allowed.");
+          askQuestion(key, question);
+          return;
+        }
+      }
+      
+      profile[key] = answer;
+      skipped = skipped.filter(item => item !== key);
     }
+
+
 
     function runStep1() {
       askQuestion("name", "What is your name?");
