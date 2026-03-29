@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
     
   <style>
+    /* Container for gallery items using grid layout */
      .gallery-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -14,7 +15,7 @@
             padding: 30px;
         }
 
-
+        /* Individual gallery card */
         .gallery-item {
             background: white;
             border-radius: 15px;
@@ -33,7 +34,7 @@
             height: 400px;
             object-fit: cover;
         }
-
+  
         .gallery-item p {
             padding: 15px;
             font-weight: 600;
@@ -49,7 +50,7 @@
             justify-content: center;
             align-items: center;
         }
-
+        /* Modal (popup) background */
         .modal-content {
             background: var(--white);
             padding: 25px;
@@ -64,7 +65,7 @@
             border-radius: 10px;
             margin-bottom: 15px;
         }
-
+        /* Close button */
         .close-btn {
             float: right;
             cursor: pointer;
@@ -87,6 +88,7 @@
             <h1 class="logo">Gender Equality Website</h1>
         </div>
         <nav class="navbar">
+          <!-- Navigation links -->
             <a href="home.html">Home</a>
             <a href="ais.html">Action Impact Simulator</a>
             <a href="gallery.html" class="active">Gallery</a>
@@ -101,7 +103,7 @@
   <main>
     <h1>Gender Equality Gallery</h1>
     <div class="gallery-container">
-
+        <!-- Clicking opens modal with index 0 -->
         <div class="gallery-item" onclick="openModal(0)">
             <img src="https://www.tmi.org/Images/cultivating-women-leadership.jpg" alt="Women in leadership">
             <p>Women in Leadership</p>
@@ -123,17 +125,17 @@
         </div>
 
     </div>
-
+    <!-- Modal popup -->
     <div class="modal" id="modal">
         <div class="modal-content" id="modalContent">
-
+            <!-- Close button -->
             <span class="close-btn" onclick="closeModal()">✖</span>
-
+             <!-- Title and description -->
             <img id="modalImg" src="https://www.tmi.org/Images/cultivating-women-leadership.jpg" alt="" style="width:100%">
             <h2 id="modalTitle">Image Title</h2>
             <p id="modalDesc"></p>
 
-        
+            <!-- Buttons for interaction -->
             <div class="controls">
                 <button onclick="changeColor()">Change Colour</button>
                 <button onclick="changeFont()">Change Font</button>
@@ -168,6 +170,7 @@
     </div>
   </footer>
   <script>
+    /* Stores all gallery data */
     const galleryData = [
         {
             title: "Women in Leadership",
@@ -191,7 +194,7 @@
         }
     ];
 
-    
+    /* Opens modal and fills it with selected image data */
     function openModal(index) {
         document.getElementById("modal").style.display = "flex";
 
