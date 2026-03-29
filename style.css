@@ -414,20 +414,6 @@ ul{
     color:#eaeaea ;
 }
 
-section {
-    margin: 40px auto;
-    max-width: 800px;
-    padding: 20px;
-    background: #e8f5e9;
-    border-radius: 10px;
-}
-
-section img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
 /* STUDENT 4 CUSTOM STYLES (SITEMAP + PROFILE)
    Scoped so it does NOT affect other pages */
 
