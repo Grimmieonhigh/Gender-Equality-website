@@ -1,32 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Content Page Student 3</title>
-  <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Representation of Women in Media | Student 3</title>
+ <link rel="stylesheet" href="style.css">
+
+ <style>
+   * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+   }
+
+
+   html {
+     scroll-behavior: smooth;
+   }
+
+
+   body {
+     font-family: "Times New Roman", Times, serif;
+     background: #f9fcff;
+     color: #333;
+     line-height: 1.6;
+   }
+
+
+   header {
+     background: linear-gradient(90deg, #cfe8ff, #ffd6e8, #d8f3dc);
+     padding: 20px;
+     text-align: center;
+     border-bottom: 3px solid #b8d8f8;
+   }
+
+
+   header h1 {
+     color: #355070;
+     margin-bottom: 8px;
+   }
+
+
+   header p {
+     color: #4a4a4a;
+   }
+
+
+
+   main {
+     width: 90%;
+     max-width: 1200px;
+     margin: 30px auto;
+   }
+
+
+   section {
+     background: #ffffff;
+     margin-bottom: 28px;
+     padding: 24px;
+     border-radius: 18px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+   }
+
+
+   h2 {
+     color: #355070;
+     margin-bottom: 14px;
+   }
+
+
+   h3 {
+     color: #355070;
+     margin-bottom: 10px;
+   }
+
+
+   p {
+     margin-bottom: 14px;
+   }
+
+
+   .intro-text {
+     margin-bottom: 18px;
+   }
+
+
+   .content-nav {
+     background: linear-gradient(180deg, #eef7ff, #fff0f6);
+     border: 2px solid #d8f3dc;
+   }
+
+
+   .content-nav ul {
+     list-style: none;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+     gap: 12px;
+     margin-top: 14px;
+   }
+
+
+   .content-nav a {
+     display: block;
+     text-decoration: none;
+     background: #bde0fe;
+     color: #1d3557;
+     padding: 12px 14px;
+     border-radius: 12px;
+     font-weight: bold;
+     text-align: center;
+     transition: 0.3s ease;
+   }
+
+
+   .content-nav a:hover {
+     background: #ffc8dd;
+     transform: translateY(-2px);
+   }
+
+
+   .image-card {
+     background: linear-gradient(180deg, #eef7ff, #fffafc);
+     border: 2px solid #d8f3dc;
+     border-radius: 16px;
+     padding: 18px;
+     margin-top: 18px;
+   }
+
+
+   .image-card img {
+     width: 100%;
+     max-width: 500px;
+     display: block;
+     margin: 0 auto 14px auto;
+     border-radius: 14px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+   }
+
+
+   .highlight-box {
+     background: linear-gradient(90deg, #d8f3dc, #eef7ff);
+     padding: 18px;
+     border-radius: 14px;
+     border: 2px solid #cfe8ff;
+     margin-top: 16px;
+   }
+
+
+   .two-column {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+     gap: 18px;
+     margin-top: 14px;
+   }
+
+
+   .mini-card {
+     background: #fffafc;
+     border: 2px solid #ffd6e8;
+     border-radius: 16px;
+     padding: 18px;
+   }
+
+
+   .mini-card ul {
+     padding-left: 20px;
+     margin-top: 8px;
+   }
+
+
+   .mini-card li {
+     margin-bottom: 8px;
+   }
+
+
+   .go-top {
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     text-decoration: none;
+     background: #bde0fe;
+     color: #1d3557;
+     padding: 12px 16px;
+     border-radius: 14px;
+     font-weight: bold;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+     transition: 0.3s ease;
+   }
+
+
+   .go-top:hover {
+     background: #ffd6e8;
+     transform: scale(1.05);
+   }
+
+
+
+   @media (max-width: 600px) {
+     main {
+       width: 95%;
+     }
+   }
+ </style>
 </head>
-<body>
-  <header>
-    <h1>Gender Equality Website</h1>
-    <nav>
-      <a href="ais.html">Action Impact Simulator</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="profile.html">User Profile</a>
-      <a href="feedback.html">Feedback</a>
-      <a href="team.html">Team Page</a>
-      <a href="sitemap.html">Sitemap</a>
-    </nav>
-  </header>
+<body id="top">
 
-  <main>
-    <h2>Content Page - Student 3</h2>
-    <p>This page will contain Student 3 content later.</p>
-  </main>
+  <header class="site-header">
+    <div class="header-container">
+        <div class="brand">
+            <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
+            <h1 class="logo">Gender Equality Website</h1>
+        </div>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="ais.html">Action Impact Simulator</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="profile.html">User Profile</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="team.html">Team Page</a>
+            <a href="sitemap.html">Sitemap</a>
+        </nav>
+    </div>
+</header>
 
-  <footer>
-    <p><a href="pageEditor_ST3.html">Page Editor</a> | <a href="validation_ST3.html">Validation</a></p>
-    <p>Student 3</p>
+
+ 
+
+
+ <main>
+  <h1>Representation of Women in Media</h1>
+  <p>Exploring how women are shown in media and why fair representation matters</p>
+
+   <section class="content-nav">
+     <h2>Quick Navigation</h2>
+     <p class="intro-text">
+       Use these links to jump to the main parts of this page.
+     </p>
+     <ul>
+       <li><a href="#meaning">What Representation Means</a></li>
+       <li><a href="#issues">Common Issues in Media</a></li>
+       <li><a href="#impact">Impact on Society</a></li>
+       <li><a href="#change">How Media Can Improve</a></li>
+     </ul>
+   </section>
+
+
+   <section id="meaning">
+     <h2>What Representation Means</h2>
+     <p>
+       Representation in media refers to the way people are shown in television, film, advertising,
+       news, social media, magazines, and online platforms. The representation of women in media matters
+       because media plays a powerful role in shaping attitudes, beliefs, and expectations in everyday life.
+     </p>
+     <p>
+       When women are shown fairly in the media, it helps people see how diverse, strong, and capable they really are.
+       However, when representation is limited or based on stereotypes,
+       it can create unrealistic standards and limit how women are seen by others and by themselves.
+       Media does not just entertain people; it also influences how society understands gender roles.
+     </p>
+
+
+     <div class="image-card">
+       <img src="https://images.unsplash.com/photo-1724862936518-ae7fcfc052c1?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Woman speaking confidently in front of a camera">
+       <h3>Media shapes public perception</h3>
+       <p>
+         The images and stories people see every day affect how women are viewed in society.
+         Positive and realistic representation can help challenge stereotypes and encourage equality.
+       </p>
+     </div>
+   </section>
+
+
+   <section id="issues">
+     <h2>Common Issues in Media</h2>
+     <p>
+       Although things have improves, women in media are still often shown in limited and
+       stereotypical ways. In many cases, women are judged more on appearance than ability,
+       or presented in roles that focus only on beauty, romance, or caregiving. This can reduce
+       the complexity of female characters and ignore the many different experiences women have in real life.
+     </p>
+     <p>
+       Another issue is underrepresentation. Women may appear less often in leadership roles,
+       expert positions, and decision making spaces in media. Women from different
+       racial, cultural, age, and body backgrounds may also receive less visibility. As a result,
+       audiences may not see a full and balanced picture of women's lives and achievements.
+     </p>
+
+
+     <div class="two-column">
+       <div class="mini-card">
+         <h3>Examples of poor representation</h3>
+         <ul>
+           <li>Focusing heavily on women's appearance</li>
+           <li>Using stereotypes such as “weak”, “emotional”, or “dependent”</li>
+           <li>Lack of female leaders or experts in media coverage</li>
+           <li>Limited diversity in age, race, body type, and background</li>
+         </ul>
+       </div>
+
+
+       <div class="mini-card">
+         <h3>Why this is a problem</h3>
+         <ul>
+           <li>It creates unrealistic expectations</li>
+           <li>It can damage confidence and self image</li>
+           <li>It reinforces outdated gender roles</li>
+           <li>It prevents audiences from seeing women fully and fairly</li>
+         </ul>
+       </div>
+     </div>
+
+
+     <div class="image-card">
+       <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg" alt="Women taking part in a professional discussion">
+       <h3>Women should be shown in varied roles</h3>
+       <p>
+         Representation improves when women are shown as leaders, creators, decision-makers,
+         professionals, and individuals with different perspectives and experiences.
+       </p>
+     </div>
+   </section>
+
+
+   <section id="impact">
+     <h2>Impact on Society</h2>
+     <p>
+       The way women are represented in media can have a strong impact on both individuals
+       and wider society. For young girls especially, social media can influence self esteem,
+       ambitions, and beliefs about what they can achieve. If women are constantly shown in
+       limited roles, it may affect how girls see their own future opportunities.
+     </p>
+     <p>
+       Media representation also affects how society treats women. Repeated stereotypes can
+       normalise bias and unfair expectations in school, work, relationships, and public life.
+       On the other hand, balanced and empowering representation can help people value women's
+       contributions more equally and challenge assumptions.
+     </p>
+
+
+     <div class="highlight-box">
+       <h3>Effects of better representation</h3>
+       <ul style="padding-left: 20px; margin-top: 10px;">
+         <li>Builds confidence and self worth</li>
+         <li>Encourages ambition and wider career goals</li>
+         <li>Challenges harmful stereotypes</li>
+         <li>Promotes respect and equality in society</li>
+         <li>Helps people understand women's experiences more realistically</li>
+       </ul>
+     </div>
+
+
+     <div class="image-card">
+       <img src="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg" alt="Young woman">
+       <h3>Representation can inspire change</h3>
+       <p>
+         When women see themselves reflected positively and realistically in media,
+         it can encourage confidence and a stronger sense of belonging.
+       </p>
+     </div>
+   </section>
+
+
+   <section id="change">
+     <h2>How Media Can Improve</h2>
+     <p>
+       Media can improve the representation of women by showing more realistic, diverse,
+       and meaningful portrayals. This includes creating female characters with depth,
+       giving women a stronger voice in storytelling, and including more women in positions
+       behind the scenes such as directing and journalism.
+     </p>
+     <p>
+       Improvement also means moving away from stereotypes and making space for women of
+       different ages, ethnicities, cultures, body types, careers, and life experiences.
+       Fair representation is important because it creates a more accurate picture of society.
+       When media becomes more inclusive, it benefits everyone by encouraging understanding,
+       respect, and equality.
+     </p>
+
+
+     <div class="image-card">
+       <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80" alt="Team discussing creative ideas around a table">
+       <h3>Inclusive media creates a stronger future</h3>
+       <p>
+         Better representation helps media reflect real life more honestly.
+         It allows women to be seen as strong individuals rather than limited stereotypes.
+       </p>
+     </div>
+   </section>
+
+
+ </main>
+
+
+ <a href="#top" class="go-top">Top ↑</a>
+
+
+ <footer>
+    <div class="brand2">
+      <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
+      <h1 class="logo">Gender Equality Website</h1>
+      <p class="tagline">Promoting fairness, equality, and opportunity for all</p>
+    </div>
+    <div class="footer-column">
+      <p>Page Editor</p>
+      <a href="pageEditor_ST1.html">Ayesha</a>
+      <a href="pageEditor_ST2.html">Inayah</a>
+      <a href="pageEditor_ST3.html">Joyana</a>
+      <a href="pageEditor_ST4.html">Shaniqua</a>
+    </div>
+
+    <div class="footer-column">
+      <p>Validation</p>
+      <a href="validation_ST1.html">Ayesha</a>
+      <a href="validation_ST2.html">Inayah</a>
+      <a href="validation_ST3.html">Joyana</a>
+      <a href="validation_ST4.html">Shaniqua</a>
+    </div>
   </footer>
+
+
 </body>
 </html>
