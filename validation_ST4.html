@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Ensures correct character encoding -->
   <meta charset="UTF-8">
+
+  <!-- Makes the page responsive on different screen sizes -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title shown in browser tab -->
   <title>Validation - Shaniqua Henry</title>
+
+  <!-- Link to global stylesheet shared across all pages -->
   <link rel="stylesheet" href="style.css">
 
+  <!-- Internal CSS (only affects this page) -->
   <style>
+    /* Custom colour variables for Student 4 brown theme */
     :root{
       --accent-brown-soft: #f5ede6;
       --accent-brown-main: #c8a27a;
@@ -14,6 +23,7 @@
       --white: #fff;
     }
 
+    /* Section styling for each validation block */
     .section{
       background-color: var(--accent-brown-soft);
       border-radius: 14px;
@@ -23,11 +33,13 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.06);
     }
 
+    /* Main page title styling */
     .title{
       color: var(--accent-brown-dark);
       text-align: center;
     }
 
+    /* Ensures all images are responsive and styled consistently */
     img{
       width: 100%;
       border-radius: 10px;
@@ -36,15 +48,20 @@
   </style>
 </head>
 
+<!-- Uses profile-page class to inherit Student 4 styling -->
 <body class="profile-page">
 
+<!-- Header section containing logo and navigation -->
 <header class="site-header">
   <div class="header-container">
+
+    <!-- Website branding (logo + title) -->
     <div class="brand">
       <img src="images/Gender_equality_symbol_(clipart).png" alt="Logo" class="logo-img">
       <h1 class="logo">Gender Equality Website</h1>
     </div>
 
+    <!-- Navigation menu linking to all main pages -->
     <nav class="navbar">
       <a href="home.html">Home</a>
       <a href="ais.html">Action Impact Simulator</a>
@@ -54,85 +71,110 @@
       <a href="team.html">Team Page</a>
       <a href="sitemap.html">Sitemap</a>
     </nav>
+
   </div>
 </header>
 
+<!-- Main content area -->
 <main class="card">
 
+  <!-- Page heading -->
   <h2 class="title">Validation - Student 4</h2>
 
+  <!-- USER PROFILE VALIDATION SECTION -->
   <section class="section" id="val-profile">
     <h3>User Profile Validation</h3>
 
+    <!-- Explanation of functionality testing -->
     <p>
       The User Profile page was tested to ensure all interactive features function correctly. 
       I verified that each step button correctly triggers prompts and that user input is stored 
       and displayed dynamically on the page.
     </p>
 
+    <!-- Explanation of input validation logic -->
     <p>
       I also tested the validation logic to ensure that the age field only accepts numeric values, 
       while name and role fields only accept alphabetic characters. Invalid inputs trigger error 
       messages and require the user to re-enter data.
     </p>
 
+    <!-- Explanation of progress tracking -->
     <p>
       The progress bar updates accurately based on completed fields, and skipped items are tracked 
       and displayed correctly. This confirms that the JavaScript logic works as intended.
     </p>
 
+    <!-- Screenshot evidence -->
     <img src="images/profile-validation.png" alt="User Profile validation screenshot">
   </section>
 
+  <!-- SITEMAP VALIDATION SECTION -->
   <section class="section" id="val-sitemap">
     <h3>Sitemap Validation</h3>
 
-    <p> During validation of the sitemap page using the W3C HTML Validator, a warning was identified stating that a section element lacked a heading.
-      To resolve this, I added a semantic h2 heading inside the section and linked it using the aria-labelledby attribute.
+    <!-- Description of validation issue and fix -->
+    <p>
+      During validation of the sitemap page using the W3C HTML Validator, a warning was identified 
+      stating that a section element lacked a heading. To resolve this, I added a semantic h2 heading 
+      inside the section and linked it using the aria-labelledby attribute.
     </p>
 
-    <p> To maintain the visual design while still meeting accessibility requirements, the heading was hidden using inline CSS rather than removing it.
-      This ensures that assistive technologies such as screen readers can correctly interpret the structure and hierarchy of the page.
+    <!-- Accessibility explanation -->
+    <p>
+      To maintain the visual design while still meeting accessibility requirements, the heading was 
+      hidden using inline CSS rather than removing it. This ensures that assistive technologies such 
+      as screen readers can correctly interpret the structure and hierarchy of the page.
     </p>
 
-    <p> This fix improves both the semantic quality and accessibility of the website, aligning with best practices in modern web development. 
-      After implementing this change, the validation warning was successfully resolved, resulting in a fully compliant and accessible sitemap page.
+    <!-- Outcome of fix -->
+    <p>
+      This fix improves both the semantic quality and accessibility of the website, aligning with best 
+      practices in modern web development. After implementing this change, the validation warning was 
+      successfully resolved, resulting in a fully compliant and accessible sitemap page.
     </p>
 
+    <!-- Screenshot evidence -->
     <img src="images/sitemap-validation.png" alt="Sitemap validation screenshot">
   </section>
 
-
+  <!-- CONTENT PAGE VALIDATION SECTION -->
   <section class="section" id="val-content">
     <h3>Content Page Validation</h3>
 
+    <!-- Testing of layout and media -->
     <p>
       The content page was tested to ensure that all text, images, and links display correctly. 
       I checked that images load properly and include alt text for accessibility.
     </p>
 
+    <!-- Structure and semantic validation -->
     <p>
       The structure of the page was validated to ensure that headings, paragraphs, and lists are 
       used correctly. This improves readability and ensures the page is well-organised.
     </p>
 
+    <!-- Content quality and responsiveness -->
     <p>
       I also reviewed the content to ensure it is clear, relevant, and appropriate. The layout was 
       tested to confirm that spacing and styling remain consistent across different screen sizes.
     </p>
 
-
+    <!-- Screenshot evidence -->
     <img src="images/content-validation.png" alt="Content page validation screenshot">
   </section>
 
+  <!-- GENERAL CODE VALIDATION SECTION -->
   <section class="section">
     <h3>Code Validation</h3>
 
+    <!-- Tools used -->
     <p>
       I used online validation tools such as the W3C HTML and CSS validators to check my code. 
       Any errors identified were corrected to ensure the pages meet web standards.
     </p>
 
+    <!-- Importance of validation -->
     <p>
       This process helped ensure that my code is clean, well-structured, and free from major 
       syntax issues.
@@ -141,28 +183,32 @@
 
 </main>
 
-  <footer>
-    <div class="brand2">
-      <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
-      <h1 class="logo">Gender Equality Website</h1>
-      <p class="tagline">Promoting fairness, equality, and opportunity for all</p>
-    </div>
-    <div class="footer-column">
-      <p>Page Editor</p>
-      <a href="pageEditor_ST1.html">Ayesha</a>
-      <a href="pageEditor_ST2.html">Inayah</a>
-      <a href="pageEditor_ST3.html">Joyana</a>
-      <a href="pageEditor_ST4.html">Shaniqua</a>
-    </div>
+<!-- Footer section with links and branding -->
+<footer>
+  <div class="brand2">
+    <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
+    <h1 class="logo">Gender Equality Website</h1>
+    <p class="tagline">Promoting fairness, equality, and opportunity for all</p>
+  </div>
 
-    <div class="footer-column">
-      <p>Validation</p>
-      <a href="validation_ST1.html">Ayesha</a>
-      <a href="validation_ST2.html">Inayah</a>
-      <a href="validation_ST3.html">Joyana</a>
-      <a href="validation_ST4.html">Shaniqua</a>
-    </div>
-  </footer>
+  <!-- Page editor links -->
+  <div class="footer-column">
+    <p>Page Editor</p>
+    <a href="pageEditor_ST1.html">Ayesha</a>
+    <a href="pageEditor_ST2.html">Inayah</a>
+    <a href="pageEditor_ST3.html">Joyana</a>
+    <a href="pageEditor_ST4.html">Shaniqua</a>
+  </div>
+
+  <!-- Validation links -->
+  <div class="footer-column">
+    <p>Validation</p>
+    <a href="validation_ST1.html">Ayesha</a>
+    <a href="validation_ST2.html">Inayah</a>
+    <a href="validation_ST3.html">Joyana</a>
+    <a href="validation_ST4.html">Shaniqua</a>
+  </div>
+</footer>
 
 </body>
 </html>
