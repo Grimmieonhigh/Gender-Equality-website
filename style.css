@@ -1,4 +1,4 @@
-:root{
+:root{ /* Colour palatte*/
     --secondary: #BFECFF;
     --primary: #FFCCEA;
     --accent: #FFF6E3;
@@ -23,16 +23,16 @@ body{
     margin: 0;
 }
 
-.site-header{
+.site-header{ 
     background: var(--primary);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
     box-shadow: var(--shadow);
-    position: sticky;
+    position: sticky; /* Sticks to top when scrolling */
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* Keeps header above other elements */
 }
-
+/* Header layout container */
 .header-container{
     max-width: 1200px;
     margin: 0 auto;
@@ -60,13 +60,13 @@ body{
     justify-content: center;
 }
 
-
+/* Navigation links */
 .navbar a{
     background-color: var(--secondary);
     color: var(--text-main);
     text-decoration: none;
     padding: 8px 12px;
-    border-radius: 999px;
+    border-radius: 999px; /* Rounded pill shape */
     font-weight: 600;
     font-size: 0.9rem;
     transition: all 0.25s ease;
@@ -109,7 +109,7 @@ footer{
 }
 .footer-column {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stack links vertically */
   min-width:120px;
 }
 
@@ -174,15 +174,7 @@ img{
     object-fit: contain;
     border-radius: 10px;
 }
-
-.logo{
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-main);
-    letter-spacing: 0.5px;
-}
-
+/* Main title section*/
 .women-title{
     font-size: 2.5rem;
     font-weight: 300;
@@ -205,6 +197,7 @@ img{
     align-items: center;
     padding: 100px 60px; 
     background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("images/titleimage.jpg");
+    /* Dark overlay + background image */
     background-size: cover;          
     background-position: center;     
     background-repeat: no-repeat;
@@ -243,7 +236,7 @@ ul{
   transform: translateY(0) scale(1);
   transition: transform 0.45s ease, box-shadow 0.45s ease;
 }
-
+/* Gradient overlay on tiles */
 .tile::before {
   content: "";
   position: absolute;
