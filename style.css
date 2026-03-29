@@ -358,7 +358,7 @@ ul{
 }
 
 .ais-card.selected {
-    border: 3px solid dark green;
+    border: 3px solid green;
     background: #e6ffe6;
 }
 
