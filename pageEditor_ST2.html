@@ -3,16 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Editor Student 2</title>
+  <title></title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root{
+      --accent-: ;
+      --title1: ;
+      --title2: ;
+      --title3: ;
+      --goto: ;
+      --white: #fff;
+    }
+    .section1{
+      background-color: var(--accent-);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 40px 50px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      
+      max-width: 850px;
+      margin: 40px auto;
+    }
+
+    .section2{
+      background-color: var(--title3);
+      border: 1px solid var(--border);
+      color: var(--white);
+      text-align: center;
+      border-radius: 14px;
+      padding: 40px 50px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+
+      max-width: 850px;
+      margin: 40px auto;
+    }
+
+    .title1{
+      color: var(--title1);
+      text-align: center;
+    }
+    .section-nav{
+      text-align:center;
+      margin: 20px 0;
+    }
+    .section-nav a{
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 5px;
+      background-color: var(--title2);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    .section-nav a:hover{
+      background-color: var(--title1);
+    }
+  </style>
 </head>
-<body>
-  <main>
-    <h1>Page Editor - Student 2</h1>
-    <p>This page will explain Student 2's contribution later.</p>
+
+<header class="site-header">
+    <div class="header-container">
+        <div class="brand">
+            <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
+            <h1 class="logo">Gender Equality Website</h1>
+        </div>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="ais.html">Action Impact Simulator</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="profile.html">User Profile</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="team.html">Team Page</a>
+            <a href="sitemap.html">Sitemap</a>
+        </nav>
+    </div>
+</header>
+
+<body id="top">
+  <main class="card">
+
+    <nav class="section-nav" aria-label="Section Navigation">
+      <a href="#splash">Splash Screen</a>
+      <a href="#ais">Action Impact Simulator</a>
+      <a href="#Content">Content Page</a>
+      <a href="#Accessibility">Accessibility Considerations</a>
+      <a href="#Compliance">Compliance with JANET Regulations</a>
+      <a href="#Team">Team Meetings</a>
+      <a href="#Reference">Reference</a>
+    </nav>
+
+    <section class="section2">
+      <h1></h1>
+    </section>
+    <section class="section1" id="splash">
+      <h2 class="title1">Splash Screen</h2>
+      <p class="paragraph">
+        
+        <a href="index.html">Go to Splash Screen</a>
+        
+        <a href="validation_ST2.html#val-">View validation evidence</a>
+      </p>
+    </section>
+
+    <section class="section1" id="ais">
+      <h2 class="title1">Action Impact Simulator</h2>
+      <p class="paragraph">
+      
+        <a href="ais.html">Go to Action Impact Simulator</a>
+        
+        <a href="validation_ST2.html#val-">View validation evidence</a>
+      </p>
+    </section>
+
+    <section class="section1" id="Content">
+      <h2 class="title1">Content Page</h2>
+      <p class="paragraph">
+
+        
+        <a href="content_ST2.html">Go to Gallery</a><br>
+        
+        <a href="validation_ST1.html#val-">View validation evidence</a>
+      </p>
+    </section>
+
+    <section class="section1" id="Accessibility">
+      <h2 class="title1">Accessibility Considerations</h2>
+      <p class="paragraph">
+        
+      </p>
+    </section>
+
+    <section class="section1" id="Compliance">
+      <h2 class="title1">JANET Compliance</h2>
+      <p class="paragraph">
+       
+      </p>
+    </section>
+
+    <section class="section1" id="Team">
+      <h2 class="title1">Team Meeting</h2>
+      <img src=".png" alt="Team Meeting">
+    </section>
+    
+    <section class="section1" id="Reference">
+      <h2 class="title1">References</h2>
+      <p class="paragraph">
+        
+      </p>
+    </section>
   </main>
 
-    <footer>
+      <footer>
     <div class="brand2">
       <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
       <h1 class="logo">Gender Equality Website</h1>
@@ -34,6 +177,6 @@
       <a href="validation_ST4.html">Shaniqua Henry - w2070583</a>
     </div>
   </footer>
-  
+  <a class="back-to-top" href="#top">Back to top</a>
 </body>
 </html>
