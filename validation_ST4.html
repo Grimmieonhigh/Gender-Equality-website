@@ -87,23 +87,19 @@
   <section class="section" id="val-sitemap">
     <h3>Sitemap Validation</h3>
 
-    <p>
-      The sitemap was tested to ensure that all links correctly navigate to their respective pages. 
-      Each node in the SVG acts as a clickable link, and hover interactions were checked to confirm 
-      that they respond visually.
+    <p> During validation of the sitemap page using the W3C HTML Validator, a warning was identified stating that a section element lacked a heading.
+      To resolve this, I added a semantic h2 heading inside the section and linked it using the aria-labelledby attribute.
     </p>
 
-    <p>
-      I also validated the structure of the SVG to ensure all elements are correctly aligned and 
-      positioned. The layout was adjusted so that section labels sit evenly between connector lines, 
-      improving readability and visual balance.
+    <p> To maintain the visual design while still meeting accessibility requirements, the heading was hidden using inline CSS rather than removing it.
+      This ensures that assistive technologies such as screen readers can correctly interpret the structure and hierarchy of the page.
     </p>
 
-    <p>
-      The sitemap was tested across different screen sizes to ensure it scales correctly without 
-      breaking the layout.
+    <p> This fix improves both the semantic quality and accessibility of the website, aligning with best practices in modern web development. 
+      After implementing this change, the validation warning was successfully resolved, resulting in a fully compliant and accessible sitemap page.
     </p>
 
+    <img src="images/unfixed-sitemap-validation.png" alt="Sitemap validation screenshot">
 
     <img src="images/sitemap-validation.png" alt="Sitemap validation screenshot">
   </section>
