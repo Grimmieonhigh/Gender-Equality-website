@@ -410,6 +410,8 @@ ul{
     margin: 0 10px;
     text-decoration: none;
     font-weight: bold;
+    background: light green;
+    color: light grey;
 }
 
 section {
