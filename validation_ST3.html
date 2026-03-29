@@ -1,15 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Validation Student 3</title>
-  <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Validation Page ST3 | Joyana Jude Varadaraj</title>
+ <link rel="stylesheet" href="style.css">
+
+ <style>
+   * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+   }
+
+
+   html {
+     scroll-behavior: smooth;
+   }
+
+
+   body {
+     font-family: "Times New Roman", Times, serif;
+     background: #f9fcff;
+     color: #333;
+     line-height: 1.7;
+   }
+
+
+   header {
+     background: linear-gradient(90deg, #cfe8ff, #ffd6e8, #d8f3dc);
+     padding: 24px;
+     text-align: center;
+     border-bottom: 3px solid #b8d8f8;
+   }
+
+
+   header h1 {
+     color: #355070;
+     margin-bottom: 8px;
+   }
+
+
+   header p {
+     color: #4a4a4a;
+   }
+
+
+
+   main {
+     width: 90%;
+     max-width: 1200px;
+     margin: 30px auto;
+   }
+
+
+   section {
+     background: #ffffff;
+     margin-bottom: 28px;
+     padding: 24px;
+     border-radius: 18px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+   }
+
+
+   h2 {
+     color: #355070;
+     margin-bottom: 14px;
+     border-bottom: 2px solid #d8f3dc;
+     padding-bottom: 8px;
+   }
+
+
+   h3 {
+     color: #355070;
+     margin: 18px 0 10px;
+   }
+
+
+   p, li {
+     margin-bottom: 10px;
+   }
+
+
+   .contents-box {
+     background: linear-gradient(180deg, #eef7ff, #fff0f6);
+     border: 2px solid #d8f3dc;
+   }
+
+
+   .contents-box ul {
+     list-style: none;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+     gap: 12px;
+     margin-top: 14px;
+   }
+
+
+   .contents-box a {
+     display: block;
+     text-decoration: none;
+     text-align: center;
+     background: #bde0fe;
+     color: #1d3557;
+     padding: 12px 14px;
+     border-radius: 12px;
+     font-weight: bold;
+     transition: 0.3s ease;
+   }
+
+
+   .contents-box a:hover {
+     background: #ffc8dd;
+     transform: translateY(-2px);
+   }
+
+
+   .validation-card {
+     background: #fffafc;
+     border: 2px solid #ffd6e8;
+     border-radius: 16px;
+     padding: 18px;
+     margin-top: 16px;
+   }
+
+
+   .validation-card img {
+     width: 100%;
+     max-width: 900px;
+     display: block;
+     margin: 14px auto;
+     border-radius: 12px;
+     border: 2px solid #cfe8ff;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+   }
+
+
+   .placeholder-box {
+     margin-top: 14px;
+     padding: 16px;
+     border: 2px dashed #95d5b2;
+     border-radius: 12px;
+     background: #f7fffb;
+   }
+
+
+   .highlight {
+     background: linear-gradient(90deg, #d8f3dc, #eef7ff);
+     border: 2px solid #cfe8ff;
+     border-radius: 14px;
+     padding: 18px;
+     margin-top: 14px;
+   }
+
+
+   .inline-link,
+   footer a {
+     color: #355070;
+     font-weight: bold;
+     text-decoration: none;
+   }
+
+
+   .top-btn {
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     text-decoration: none;
+     background: #bde0fe;
+     color: #1d3557;
+     padding: 12px 16px;
+     border-radius: 14px;
+     font-weight: bold;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+     transition: 0.3s ease;
+   }
+
+
+   .top-btn:hover {
+     background: #ffd6e8;
+     transform: scale(1.05);
+   }
+
+
+
+
+   @media (max-width: 600px) {
+     main {
+       width: 95%;
+     }
+   }
+ </style>
 </head>
-<body>
-  <main>
-    <h1>Validation - Student 3</h1>
-    <p>This page will contain validation evidence later.</p>
-  </main>
+<body id="top">
+
+
+<header class="site-header">
+  <div class="header-container">
+    <div class="brand">
+      <img src="images/Gender_equality_symbol_(clipart).png" alt="Logo" class="logo-img">
+      <h1 class="logo">Gender Equality Website</h1>
+    </div>
+
+
+    <nav class="navbar">
+      <a href="home.html">Home</a>
+      <a href="ais.html">Action Impact Simulator</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="profile.html">User Profile</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="team.html">Team Page</a>
+      <a href="sitemap.html">Sitemap</a>
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+
+ <main>
+
+
+   <section class="contents-box">
+     <h2>Contents</h2>
+     <ul>
+       <li><a href="#overview">Validation Overview</a></li>
+       <li><a href="#feedback-validation">Feedback Page Validation</a></li>
+       <li><a href="#team-validation">Team Page Validation</a></li>
+       <li><a href="#content-validation">Content Page Validation</a></li>
+       <li><a href="#reflection">Validation Reflection</a></li>
+     </ul>
+   </section>
+
+
+   <section id="overview">
+     <h2>Validation Overview</h2>
+     <p>
+       This page provides validation evidence for the web pages I completed as Student 3.
+     <p>
+       The pages validated here are:
+     </p>
+     <ul>
+       <li><strong>feedback.html</strong></li>
+       <li><strong>team.html</strong></li>
+       <li><strong>content_ST3.html</strong></li>
+     </ul>
+
+
+    
+   </section>
+
+
+   <section id="feedback-validation">
+     <h2>Feedback Page Validation</h2>
+     <div class="validation-card">
+       <h3>Page: feedback.html</h3>
+       <p>
+         This section shows the validation result for my Feedback & Program Directory page.
+       </p>
+
+
+     <img src="images\Screenshot 2026-03-29 151018.png" alt="HTML validation result for feedback page">
+    
+   </section>
+
+
+   <section id="team-validation">
+     <h2>Team Page Validation</h2>
+     <div class="validation-card">
+       <h3>Page: team.html</h3>
+       <p>
+         This section shows the validation result for my Team page.
+       </p>
+
+
+       <img src="images\Screenshot 2026-03-29 151303.png" alt="HTML validation result for team page">
+
+
+   </section>
+
+
+   <section id="content-validation">
+     <h2>Content Page Validation</h2>
+     <div class="validation-card">
+       <h3>Page: content_ST3.html</h3>
+       <p>
+         This section shows the validation result for my individual content page on Gender Equality.
+       </p>
+
+
+       <img src="images\Screenshot 2026-03-29 151427.png" alt="HTML validation result for content page">
+   </section>
+
+
+   <section id="reflection">
+     <h2>Reflection on the Validation Process</h2>
+     <p>
+       During the validation process, I checked each of my pages using the W3C validator and corrected any issues before pasting the screenshot. This process helped me identify small mistakes such as missing separators in links, incorrect formatting, or structural issues that could affect page validity.
+     </p>
+     <p>
+       Validation was useful because it reminded me to pay attention to detail and make sure my pages followed proper HTML structure. It also helped me understand that even small code errors can affect how a page behaves or how reliably it is interpreted.
+     </p>
+     <p>
+       From this process, I learned the importance of testing pages carefully, checking links, and reviewing HTML structure before final submission. Validation helped improve the technical quality of my work and made my pages more reliable.
+     </p>
+   </section>
+
+
+ </main>
+
+
+ <a href="#top" class="top-btn">Top ↑</a>
+
+
+ <footer>
+    <div class="brand2">
+      <img src="images/Gender_equality_symbol_(clipart).png" alt="Gender Equality Website Logo" class="logo-img">
+      <h1 class="logo">Gender Equality Website</h1>
+      <p class="tagline">Promoting fairness, equality, and opportunity for all</p>
+    </div>
+    <div class="footer-column">
+      <p>Page Editor</p>
+      <a href="pageEditor_ST1.html">Ayesha</a>
+      <a href="pageEditor_ST2.html">Inayah</a>
+      <a href="pageEditor_ST3.html">Joyana</a>
+      <a href="pageEditor_ST4.html">Shaniqua</a>
+    </div>
+
+    <div class="footer-column">
+      <p>Validation</p>
+      <a href="validation_ST1.html">Ayesha</a>
+      <a href="validation_ST2.html">Inayah</a>
+      <a href="validation_ST3.html">Joyana</a>
+      <a href="validation_ST4.html">Shaniqua</a>
+    </div>
+  </footer>
+
+
 </body>
 </html>
