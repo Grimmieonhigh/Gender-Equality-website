@@ -68,3 +68,16 @@ function updateFeedback() {
         document.body.style.backgroundImage = "url('images/high.jpg')";
     }
 }
+
+/* Student 2 - extra JS for editor page for fun */
+
+let accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach(btn => {
+    btn.addEventListener("click", () => {
+        let panel = btn.nextElementSibling;
+
+        panel.style.display =
+            panel.style.display === "block" ? "none" : "block";
+    });
+});
